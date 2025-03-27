@@ -4,7 +4,7 @@ const HomeMain = () => {
   return (
     <>
       <section className={styles.homeMain}>
-        <a href="">about page</a> 
+        <a href="">about</a> 
       </section>
     </>
   );
