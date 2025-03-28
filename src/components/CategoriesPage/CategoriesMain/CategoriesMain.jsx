@@ -3,10 +3,10 @@ import styles from "./CategoriesMain.module.scss";
 const CategoriesMain = () => {
   return (
     <section className={styles.categoriesMain}>
-      <h1 className="titleh1">Чем ты&nbsp;
+      <h2 className="titleh2">Чем ты&nbsp;
         <span className="texBlueGreen">увлекаешься?       
         </span>
-      </h1>
+      </h2>
       <p className={styles.categoriesMain__text}>
         Выбери минимум 3 интереса — так ты увидишь больше подходящих
         мероприятий.

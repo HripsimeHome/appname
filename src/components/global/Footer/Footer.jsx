@@ -13,8 +13,10 @@ import {
  
 const Footer = () => {
   return (
-    <footer className={styles.footer}>  
-    
+    <footer className={styles.footer}>         
+      <div className={`${styles.footer__container} container`}>
+      <div className={styles.footer__line}></div>
+      </div>
     </footer>
   );
 };

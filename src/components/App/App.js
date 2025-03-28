@@ -16,7 +16,7 @@ function App() {
       <div className="container">
         <AppRouter />
       </div>
-      {/*<Footer />*/}
+      <Footer />
     </>
   );
 }

@@ -3,4 +3,44 @@
 
 .aboutMain {     
    
+  &__list {  
+    margin: 34px 0 40px; 
+     
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      position: relative;
+      @include setFont(16px, 600); 
+      margin-bottom: 12px;     
+      padding-left: 24px;  
+  
+      &::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background: linear-gradient(90deg, #6DFF60 0%, #56A4E3 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      &::after {
+        content: "";
+        width: 10px; 
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;  
+        position: absolute;
+        left: 3px;  
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
 }
