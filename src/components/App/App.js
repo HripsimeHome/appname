@@ -1,14 +1,22 @@
-import Header from "../global/Header/Header"; 
-import Footer from "../global/Footer/Footer" 
- 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import AppRouter from "./../../router/AppRouter";
+import { scrollTop } from "../../utils/scrollTop";
+import Footer from "../global/Footer/Footer";
+
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    scrollTop();
+  }, [location]);
+
   return (
     <>
-      <Header />
       <div className="container">
-        Containerdfg 
+        <AppRouter />
       </div>
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }

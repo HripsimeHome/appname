@@ -1,0 +1,32 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.categoriesMain {
+ // display: flex;
+ padding: 20px 0 10px;
+
+ &__text {
+  @include setFont(14px, 500);   
+  margin: 10px 0 20px;  
+ }
+
+ &__cardContainer {
+  display: flex;
+  gap: 12px;   
+ }
+
+  &__card {
+  //  @include flexCol(center, flex-start);
+    @include flexCol();
+    flex-direction: column;
+    width: 109px;
+    height: 109px;
+    background-color: $color-black04;
+    border-radius: 10px;
+    padding-top: 9px;
+  }
+
+  &__cardTitle {
+   @include setFont(14px, 600);   
+  }
+}

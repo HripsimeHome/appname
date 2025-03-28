@@ -40,22 +40,54 @@ a {
 }
 
 .container {
-  max-width: 768px;
+ // max-width: 351px;
+  max-width: 375px;
   width: 100%;   
-  margin: 0 auto 0;
+  margin: 0 auto;
+ // box-sizing:content-box;
+  padding-left: 12px;
+  padding-right: 12px;
 
-  //padding-right: 100px;
-  //padding-left: 100px;
- 
-  /*
-
-  @include mdScreenMedia {
-    max-width: 640px;
-  }*/
+  //padding-left: 20px;
+  //padding-right: 20px;
 
   @include smScreenMedia {
-   // max-width: 360px;
-    //padding-left: 16px;
-    // padding-right: 16px;
+    max-width: 576px;
+   // padding-left: 16px;
+   // padding-right: 16px;
   }  
+
+  @include mdScreenMedia {
+    max-width:7686px;
+   // padding-left: 16px;
+   // padding-right: 16px;
+  }  
+}
+
+.titleh1 {
+  @include setFont(28px, 600);   
+}
+
+.texBlueGreen{
+ background: $color-blueGreen;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+.btnPrimary {
+  width: 100%;
+  height: 52px;
+  @include setFont(16px, 700); 
+  background: linear-gradient(90deg, #A4F77E 0%, #A4F77D 50%, #A5F77E 100%);
+  border-radius: 100px;  
+
+  &:hover {   
+    background:   linear-gradient(90deg, #6DFF60 0%, #AFE356 100%);    
+    transition: $transition;
+    cursor: pointer;
+  }
+  
+  &:active {
+    transform: translateY(1px);
+  }
 }
