@@ -14,8 +14,7 @@ import {
 const Footer = () => {
   return (
     <footer className={styles.footer}>  
-      Footer
-      
+    
     </footer>
   );
 };

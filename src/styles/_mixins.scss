@@ -41,9 +41,9 @@
 @mixin setFont(
   $size,
   $weight,
-  $family: $font-family,
-  $color: $color-white,
-  $useMedia: true
+  $color: $color-black,
+  $family: $font-family, 
+ // $useMedia: true
 ) {
   font-size: $size;
   font-weight: $weight;
