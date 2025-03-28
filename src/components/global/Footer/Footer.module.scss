@@ -2,6 +2,18 @@
 @import "../../../styles/vars";
 
 .footer {
+  width: 100%;
+  background-color: $color-white;
 
-  
+  &__container {
+    width: 100%;      
+  }
+ 
+  &__line {
+    width: 133px;
+    height: 5px;
+    display: block;
+    background-color: $color-black;
+    border-radius: 95px;
+  }
 }

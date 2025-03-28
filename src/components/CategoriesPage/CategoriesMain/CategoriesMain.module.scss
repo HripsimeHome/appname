@@ -15,8 +15,7 @@
   gap: 12px;   
  }
 
-  &__card {
-  //  @include flexCol(center, flex-start);
+  &__card { 
     @include flexCol();
     flex-direction: column;
     width: 109px;
@@ -24,6 +23,10 @@
     background-color: $color-black04;
     border-radius: 10px;
     padding-top: 9px;
+
+    &:hover {
+      outline: 2px solid $color-green;
+    }
   }
 
   &__cardTitle {

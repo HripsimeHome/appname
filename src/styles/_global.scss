@@ -65,18 +65,30 @@ a {
 }
 
 .titleh1 {
+  @include setFont(32px, 600);   
+}
+
+.titleh2 {
   @include setFont(28px, 600);   
 }
 
-.texBlueGreen{
+.textBlueGreen{
  background: $color-blueGreen;
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
 }
+.textGreenLightGreen{
+  background: $color-greenLightGreen;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
 
 .btnPrimary {
-  width: 100%;
+  display: block;
   height: 52px;
+  line-height: 52px;  
+  text-align: center;   
   @include setFont(16px, 700); 
   background: linear-gradient(90deg, #A4F77E 0%, #A4F77D 50%, #A5F77E 100%);
   border-radius: 100px;  
@@ -91,3 +103,5 @@ a {
     transform: translateY(1px);
   }
 }
+ 
+
