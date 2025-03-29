@@ -8,17 +8,19 @@ import {
 function RegistrationMain() {
   return (
     <section className={styles.registrationMain}>
-       
 
-      <h1 className="titleh1">
-        <span className="textBlueGreen">Расскажи<br />
-        </span>
-        немного о себе!     
-      </h1>
-      <p>
-        Это поможет находить мероприятия и людей, которые тебе подойдут.
-      </p>
 
+      
+      <div className="center">
+        <h1 className="titleh1">
+          <span className="textBlueGreen">Расскажи<br />
+          </span>
+          немного о себе!     
+        </h1>
+        <p>
+          Это поможет находить мероприятия и людей, которые тебе подойдут.
+        </p>
+      </div>
       Я согласен(а) на обработку персональных данных
       <Link 
         to={categoriesPagePath} 
