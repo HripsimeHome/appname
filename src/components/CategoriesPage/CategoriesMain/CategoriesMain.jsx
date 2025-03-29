@@ -23,31 +23,93 @@ const CategoriesMain = () => {
           <h3 className={styles.categoriesMain__cardTitle}>
             Видеоигры
           </h3>
-          fg
+          img
         </div>
 
         <div className={styles.categoriesMain__card}>
           <h3 className={styles.categoriesMain__cardTitle}>
-            Видеоигры
+          Встречи
           </h3>
-          fg
+          img
         </div>
 
         <div className={styles.categoriesMain__card}>
           <h3 className={styles.categoriesMain__cardTitle}>
-            Видеоигры
+          Культура
           </h3>
-          fg
+          img
         </div>
 
         <div className={styles.categoriesMain__card}>
           <h3 className={styles.categoriesMain__cardTitle}>
-            Видеоигры
+            Путешествия
           </h3>
-          fg
+          img
         </div>
+
+        <div className={styles.categoriesMain__card}>
+          <h3 className={styles.categoriesMain__cardTitle}>
+            Прогулки
+          </h3>
+          img
+        </div>
+
+        <div className={styles.categoriesMain__card}>
+          <h3 className={styles.categoriesMain__cardTitle}>
+            Творчество
+          </h3>
+          img
+        </div>
+
+        <div className={styles.categoriesMain__card}>
+          <h3 className={styles.categoriesMain__cardTitle}>
+            Хобби
+          </h3>
+          img
+        </div>
+
+
+        <div className={styles.categoriesMain__card}>
+          <h3 className={styles.categoriesMain__cardTitle}>
+            Красота
+          </h3>
+          img
+        </div>
+
+        <div className={styles.categoriesMain__card}>
+          <h3 className={styles.categoriesMain__cardTitle}>
+            Спорт
+          </h3>
+          img
+        </div>
+
+        <div className={styles.categoriesMain__card}>
+          <h3 className={styles.categoriesMain__cardTitle}>
+            Бизнес
+          </h3>
+          img
+        </div>
+
+        <div className={styles.categoriesMain__card}>
+          <h3 className={styles.categoriesMain__cardTitle}>
+            Наука
+          </h3>
+          img
+        </div>
+
+        <div className={styles.categoriesMain__card}>
+          <h3 className={styles.categoriesMain__cardTitle}>
+            Книги
+          </h3>
+          img
+        </div>
+
+
+
 
       </div>
+      <br />
+
       <Link 
         to={searchPagePath} 
         className="btnPrimary">

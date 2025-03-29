@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom"
 import styles from "./HomeMain.module.scss";
 
+
 import {    
   aboutPagePath
 } from "../../../router/path";
 
+ 
 const HomeMain = () => {
   return (    
     <section className={styles.homeMain}>
+
+     
+
+
+
       <h1 className={`${styles.homeMain__title} titleh1`}>Добро пожаловать&nbsp;
         <br />
         <span className="textBlueGreen">в AppName!</span>

@@ -15,7 +15,10 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>         
       <div className={`${styles.footer__container} container`}>
-      <div className={styles.footer__line}></div>
+
+      <div className={styles.footer__linePosition}> 
+      <spab className={styles.footer__line}></spab>
+      </div>
       </div>
     </footer>
   );

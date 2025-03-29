@@ -39,19 +39,32 @@ function RegistrationMain() {
             </span>
             немного о себе!     
           </h1>
+
           <p>
             Это поможет находить мероприятия и людей, которые тебе подойдут.
           </p>
         </div>
+
+
         
       </div>
+      <br /><br />
 
-
-
+        Имя*
+        <br />
+        <br />
+        Выберите пол* 
+        <br />
+        <br />
+        Возраст
+        <br />
+        <br />
 
 
 
       Я согласен(а) на обработку персональных данных
+      <br />
+      <br />
       <Link 
         to={categoriesPagePath} 
         className="btnPrimary">Далее
