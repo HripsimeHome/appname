@@ -2,6 +2,13 @@
 @import "../../../styles/vars";
 
 .audienceMain {
- // @include flexCol();
-
+  @include bgWebp(
+    "../assets/images/audience/audienceBg.png",
+    "../assets/images/audience/audienceBg.webp",
+  );
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  transition: $transition;
+  padding-top: 280px;
 }

@@ -2,6 +2,15 @@
 @import "../../../styles/vars";
 
 .homeMain {     
+  @include bgWebp(
+    "../assets/images/home/homeBg.png",
+    "../assets/images/home/homeBg.webp",
+  );
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  transition: $transition;
+  padding-top: 360px;
 
   &__title {
     text-align: center;    
