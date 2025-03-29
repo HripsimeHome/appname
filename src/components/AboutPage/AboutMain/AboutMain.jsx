@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import styles from "./AboutMain.module.scss";
 
 import {    
-  aboutPagePath
+  audiencePagePath
 } from "../../../router/path";
 
 const AboutMain = () => {
@@ -21,9 +21,9 @@ const AboutMain = () => {
         <li>Нажимай «Я пойду» и присоединяйся</li>
         </ul>
       <Link 
-        to={aboutPagePath} 
-        className="btnPrimary">Далее
-      </Link>
+              to={audiencePagePath} 
+              className="btnPrimary">Далее
+            </Link>
     </section>
   );
 };
