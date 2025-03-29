@@ -1,7 +1,18 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.registrationMain {   
+.registrationMain {  
+
+  @include bgWebp(
+    "../assets/images/registration/registrationBg.png",
+    "../assets/images/registration/registrationBg.webp",
+  );
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  transition: $transition;
+  padding: 18px 20px 0;
+
   &__header {
     @include flexCol();
     flex-direction: column;

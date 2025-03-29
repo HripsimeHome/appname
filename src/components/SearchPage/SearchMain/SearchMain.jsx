@@ -15,7 +15,7 @@ const SearchMain = () => {
       <Link 
         to={singlePagePath} 
         >
-          <br />
+          <br /> <br />
           Single page
               
       </Link>

@@ -3,7 +3,7 @@
 
 .categoriesMain {
  // display: flex;
- padding: 20px 0 10px;
+ padding: 20px 12px 10px;
 
  &__text {
   @include setFont(14px, 500);   
@@ -12,6 +12,7 @@
 
  &__cardContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;   
  }
 
@@ -26,6 +27,7 @@
 
     &:hover {
       outline: 2px solid $color-green;
+      cursor: pointer
     }
   }
 
