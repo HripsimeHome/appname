@@ -1,6 +1,50 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.aboutMain {     
-   
+.registrationMain {   
+  &__header {
+    @include flexCol();
+    flex-direction: column;
+  }
+  
+  &__imgContainer {
+    position: relative;
+    width: 166px;
+    height: 166px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background: linear-gradient(90deg, rgba(109, 255, 96, 0.1) 0%, rgba(86, 164, 227, 0.1) 100%);
+    background-repeat: no-repeat;
+  
+    border-radius: 50%; // Ensures it's circular
+  }
+  
+  &__img {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+  }
+    
+  &__cameraIconBg {
+    @include flexCol();
+    position: absolute;
+    bottom: 30px;
+    right: 35px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(138.37deg, #009DDF 14.8%, #01D44A 50.34%, #9DCF00 85.88%);
+    cursor: pointer;    
+  }
+  
+  &__cameraIcon {
+    @include svg(26px, $color-white);    
+
+    &:hover {
+      fill:#A5F77E;
+    }
+  }
+  
+  
 }
