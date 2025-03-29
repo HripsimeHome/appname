@@ -13,7 +13,7 @@ const HomeMain = () => {
         <span className="textBlueGreen">в AppName!</span>
       </h1> 
 
-      <ul className={styles.homeMain__list}>
+      <ul className="list circleBlueGreen">
         <li>Ищи события по интересам</li>
         <li>Встречай единомышленников</li>
         <li>Открывай новое в своей стране</li>
