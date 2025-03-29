@@ -1,13 +1,27 @@
-import styles from "./AboutMain.module.scss";
+import { Link } from "react-router-dom"
+import styles from "./SearchMain.module.scss";
 
-const AboutMain = () => {
+import {    
+  singlePagePath
+} from "../../../router/path";
+
+
+const SearchMain = () => {
   return (
-    <section className={styles.aboutMain}>
-      <h1>Что это за платформа?</h1>
-      Игры, прогулки, вечеринки, шопинг – выбирай своё! Фильтруй события по
-      интересам Нажимай «Я пойду» и присоединяйся
+    <section className={styles.searchMain}>
+      <h1>Search</h1>
+      Рекомендации спорт Видеоигры Путешествия
+
+      <Link 
+        to={singlePagePath} 
+        >
+          <br />
+          Single page
+              
+      </Link>
+
     </section>
   );
 };
 
-export default AboutMain;
+export default SearchMain;
