@@ -26,8 +26,7 @@
     justify-content: center;
     align-items: center;  
     background: linear-gradient(90deg, rgba(109, 255, 96, 0.1) 0%, rgba(86, 164, 227, 0.1) 100%);
-    background-repeat: no-repeat;
-  
+    background-repeat: no-repeat;  
     border-radius: 50%; // Ensures it's circular
   }
   
@@ -57,6 +56,76 @@
       fill:#A5F77E;
     }
   }
+
+  &__registrationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0 36px;
+  }
+
+
+  input[type="text"], 
+  select {
+    width: 100%;
+    height: 46px;
+    @include setFont(14px, 500, $color-black);
+    background: $color-black03;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    caret-color: $color-black;
+    padding: 16px;
   
+    &::placeholder {
+      @include setFont(14px, 500, $color-grey04);
+      white-space: normal;
+    }
+  }
+  
+  select {
+    //appearance: none;  
+    padding-right: 32px;  
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-black01;
+    border-radius: 4px;
+    background: $color-black03;
+    position: relative;
+    cursor: pointer;
+    color:red;
+    
+    &:checked {
+      //background-color: $color-green; // Checkbox background when checked
+  
+      &::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+        // Apply the SVG sprite icon
+       // background-color: white; // Color of the checkmark
+        mask: url("../../../assets/svg/sprite.svg#check") no-repeat center;
+        mask-size: contain;
+      }
+    }
+  }
+
+
+
+  
+  
+  
+
+
   
 }
