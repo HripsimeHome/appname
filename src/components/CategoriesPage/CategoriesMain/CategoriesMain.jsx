@@ -1,10 +1,135 @@
 import { Link } from "react-router-dom"
 import styles from "./CategoriesMain.module.scss";
+import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
 import {    
   searchPagePath
 } from "../../../router/path";
 
+import {
+  videogameImage,
+  videogameWebpImage,
+
+  meetupImage,
+  meetupWebpImage,
+
+  cultureImage,
+  cultureWebpImage,
+
+  travelImage,
+  travelWebpImage,
+
+  walksImage,
+  walksWebpImage,
+
+  creationImage,
+  creationWebpImage,
+
+  hobbyImage,
+  hobbyWebpImage,
+
+  beautyImage,
+  beautyWebpImage,
+
+  sportImage,
+  sportWebpImage,
+
+  businessImage,
+  businessWebpImage,
+
+  scienceImage,
+  scienceWebpImage,
+
+  booksImage,
+  booksWebpImage
+
+} from "../../../assets/images"
+
+const category = [
+  {
+    title: "Видеоигры",
+    image: videogameImage,
+    webpImage: videogameWebpImage,
+    alt: "Видеоигры"  
+  },
+
+  {
+    title: "Встречи",
+    image: meetupImage,
+    webpImage: meetupWebpImage,
+    alt: "Встречи"  
+  },
+
+  {
+    title: "Культура",
+    image: cultureImage,
+    webpImage: cultureWebpImage,
+    alt: "Культура"  
+  },
+
+  {
+    title: "Путешествия",
+    image: travelImage,
+    webpImage: travelWebpImage,
+    alt: "Путешествия"  
+  },
+
+  {
+    title: "Прогулки",
+    image: walksImage,
+    webpImage: walksWebpImage,
+    alt: "Прогулки"  
+  },
+
+  {
+    title: "Творчество",
+    image: creationImage,
+    webpImage: creationWebpImage,
+    alt: "Творчество"  
+  },
+
+  {
+    title: "Хобби",
+    image: hobbyImage,
+    webpImage: hobbyWebpImage,
+    alt: "Хобби"  
+  },
+
+  {
+    title: "Красота",
+    image: beautyImage,
+    webpImage: beautyWebpImage,
+    alt: "Красота"  
+  },
+
+  {
+    title: "Спорт",
+    image: sportImage,
+    webpImage: sportWebpImage,
+    alt: "Спорт"  
+  },
+
+  {
+    title: "Бизнес",
+    image: businessImage,
+    webpImage: businessWebpImage,
+    alt: "Бизнес"  
+  },
+
+  {
+    title: "Наука",
+    image: scienceImage,
+    webpImage: scienceWebpImage,
+    alt: "Наука"  
+  },  
+
+  {
+    title: "Книги",
+    image: booksImage,
+    webpImage: booksWebpImage,
+    alt: "Книги"  
+  },
+]
 
 const CategoriesMain = () => {
   return (
@@ -17,95 +142,24 @@ const CategoriesMain = () => {
         Выбери минимум 3 интереса — так ты увидишь больше подходящих
         мероприятий.
       </p>
-      <div className={styles.categoriesMain__cardContainer}>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Видеоигры
+      <div className={styles.categoriesMain__cardContainer}>   
+ 
+      {category.map(
+      ({ title, image, webpImage, alt }, index) => (
+        <div className={styles.categoriesMain__category}>
+          <h3 className={styles.categoriesMain__categoryTitle}>
+          {title}
           </h3>
-          img
+          <ImageWebp
+            src={image}
+            srcSet={webpImage}
+            alt={alt}
+            key={index}
+            className={styles.categoriesMain__categoryImg}
+          />
         </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-          Встречи
-          </h3>
-          img
-        </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-          Культура
-          </h3>
-          img
-        </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Путешествия
-          </h3>
-          img
-        </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Прогулки
-          </h3>
-          img
-        </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Творчество
-          </h3>
-          img
-        </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Хобби
-          </h3>
-          img
-        </div>
-
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Красота
-          </h3>
-          img
-        </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Спорт
-          </h3>
-          img
-        </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Бизнес
-          </h3>
-          img
-        </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Наука
-          </h3>
-          img
-        </div>
-
-        <div className={styles.categoriesMain__card}>
-          <h3 className={styles.categoriesMain__cardTitle}>
-            Книги
-          </h3>
-          img
-        </div>
-
-
-
+         )
+        )}
 
       </div>
       <br />

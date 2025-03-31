@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import styles from "./HomeMain.module.scss";
 
-
 import {    
   aboutPagePath
 } from "../../../router/path";
@@ -10,7 +9,6 @@ import {
 const HomeMain = () => {
   return (    
     <section className={styles.homeMain}>
-
      
 
 

@@ -23,9 +23,9 @@ const AboutMain = () => {
         <li>Нажимай «Я пойду» и присоединяйся</li>
         </ul>
       <Link 
-              to={audiencePagePath} 
-              className="btnPrimary">Далее
-            </Link>
+        to={audiencePagePath} 
+        className="btnPrimary">Далее
+      </Link>
     </section>
   );
 };
