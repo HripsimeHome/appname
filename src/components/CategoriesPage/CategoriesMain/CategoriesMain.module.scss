@@ -16,7 +16,7 @@
   gap: 12px;   
  }
 
-  &__card { 
+  &__category { 
     @include flexCol();
     flex-direction: column;
     width: 109px;
@@ -31,7 +31,13 @@
     }
   }
 
-  &__cardTitle {
-   @include setFont(14px, 600);   
+  &__categoryTitle {
+   @include setFont(13px, 600);   
   }
+
+  &__categoryImg {
+   width: 100%;   
+   }
+
+  
 }

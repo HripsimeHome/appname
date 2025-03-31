@@ -5,8 +5,7 @@ function SearchFilter() {
     <div className={styles.searchFilter}>
        <input type="text" placeholder="Найти мероприятие..."/>
        <button className={styles.searchFilter__filterIcon}>
-       </button>
-       
+       </button>       
     </div>
   )
 }
