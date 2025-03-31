@@ -43,28 +43,36 @@ function RegistrationMain() {
           <p>
             Это поможет находить мероприятия и людей, которые тебе подойдут.
           </p>
-        </div>
-
-
-        
+        </div>        
       </div>
-      <br /><br />
-
-        Имя*
-        <br />
-        <br />
-        Выберите пол* 
-        <br />
-        <br />
-        Возраст
-        <br />
-        <br />
 
 
 
-      Я согласен(а) на обработку персональных данных
-      <br />
-      <br />
+
+      <div className={styles.registrationMain__registrationContainer}>
+  <input type="text" placeholder="Имя" />
+
+  <input type="text" placeholder="Возраст" />
+
+ <select required>
+    <option value="" hidden>Выберите пол</option>
+    <option value="female">Женский</option>
+    <option value="male">Мужской</option>
+  </select>
+
+  <label>
+    <input type="checkbox" required />
+    &nbsp;Я согласен(а) на обработку персональных данных
+  </label>
+</div>
+
+
+
+
+
+
+
+
       <Link 
         to={categoriesPagePath} 
         className="btnPrimary">Далее

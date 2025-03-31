@@ -1,0 +1,42 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.searchFilter {
+  display: flex;
+  gap: 10px;
+  height: 64px;
+  background-color: $color-white;
+  border-bottom-left-radius: 16px; 
+  border-bottom-right-radius: 16px; 
+  box-shadow: 0px 13px 13px 0px rgba(0, 0, 0, 0.02);
+  padding: 12px;
+
+  input[type="text"] {
+    width: 300px;
+    height: 40px;
+    @include setFont(14px, 500, $color-black);
+    background: $color-black04;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    caret-color: $color-black;
+    padding: 16px;
+  
+    &::placeholder {
+      @include setFont(14px, 500, $color-grey04);
+      white-space: normal;
+    }
+  }
+  
+  &__filterIcon {
+    width: 40px;
+    height: 40px;
+    background: $color-black04;  
+    border-radius: 10px;
+    cursor: pointer; 
+  }
+
+  
+}
+
+
