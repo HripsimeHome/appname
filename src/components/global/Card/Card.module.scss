@@ -1,0 +1,71 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.card {
+  max-width: 231px;
+  width: 100%;
+  background-color: $color-white;
+  border-radius: 12px;  
+  padding: 6px;
+
+  &__title {
+    @include setFont(14px, 600,);   
+    margin: 10px 0;
+  }
+
+  &__header {
+    position: relative;
+    height: 100px;
+    @include flexCol();
+    flex-direction: column;
+    background: linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%);
+    border-radius: 8px;
+  }
+
+  &__profileContainer {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+   /*  @include flexCol();
+    align-self: flex-start;
+    margin: 6px;*/
+  }
+  
+  &__profilePhoto {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   border: 2px solid $color-white;
+  }
+
+  &__username {
+    @include setFont(12px, 700, $color-white);
+    margin-left: 6px;;
+  }
+  
+
+
+
+
+  &__infoContainerBig {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    @include setFont(11px, 500);
+    //@include setFont(12px, 500);
+  }
+
+  
+
+  &__greyPanel {
+    background-color: $color-black03;
+    border-radius: 6px;
+    padding: 5px;
+  }
+
+  &__greyLine {
+    border: 1px solid #F3F3F3
+  }
+  
+   
+}

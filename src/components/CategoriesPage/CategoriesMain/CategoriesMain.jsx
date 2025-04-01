@@ -142,25 +142,23 @@ const CategoriesMain = () => {
         Выбери минимум 3 интереса — так ты увидишь больше подходящих
         мероприятий.
       </p>
-      <div className={styles.categoriesMain__cardContainer}>   
- 
-      {category.map(
-      ({ title, image, webpImage, alt }, index) => (
-        <div className={styles.categoriesMain__category}>
-          <h3 className={styles.categoriesMain__categoryTitle}>
-          {title}
-          </h3>
-          <ImageWebp
-            src={image}
-            srcSet={webpImage}
-            alt={alt}
-            key={index}
-            className={styles.categoriesMain__categoryImg}
-          />
+      <div className={styles.categoriesMain__cardContainer}> 
+        {category.map(
+        ({ title, image, webpImage, alt }, index) => (
+          <div className={styles.categoriesMain__category}>
+            <h3 className={styles.categoriesMain__categoryTitle}>
+            {title}
+            </h3>
+            <ImageWebp
+              src={image}
+              srcSet={webpImage}
+              alt={alt}
+              key={index}
+              className={styles.categoriesMain__categoryImg}
+            />
         </div>
          )
         )}
-
       </div>
       <br />
 

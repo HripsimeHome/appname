@@ -2,21 +2,21 @@
 @import "../../../styles/vars";
 
 .categoriesMain {
- // display: flex;
- padding: 20px 12px 10px;
+  // display: flex;
+  padding: 20px 12px 10px;
 
- &__text {
-  @include setFont(14px, 500);   
-  margin: 10px 0 20px;  
- }
+  &__text {
+    @include setFont(14px, 500);
+    margin: 10px 0 20px;
+  }
 
- &__cardContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;   
- }
+  &__cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 
-  &__category { 
+  &__category {
     @include flexCol();
     flex-direction: column;
     width: 109px;
@@ -27,17 +27,16 @@
 
     &:hover {
       outline: 2px solid $color-green;
-      cursor: pointer
+      cursor: pointer;
     }
   }
 
   &__categoryTitle {
-   @include setFont(13px, 600);   
+    @include setFont(13px, 600);
   }
 
   &__categoryImg {
-   width: 100%;   
-   }
-
-  
+    width: 100%;
+    transition: $transition;
+  }
 }

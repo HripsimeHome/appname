@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import styles from "./SearchMain.module.scss";
 import SearchFilter from "../../layout/SearchFilter/SearchFilter"
+import CardMain from "../../global/CardMain/CardMain"
 
 import {    
   singlePagePath
@@ -12,15 +13,9 @@ const SearchMain = () => {
     <section className={styles.searchMain}>
     <SearchFilter />
       Рекомендации спорт Видеоигры Путешествия
-
-      <Link 
-        to={singlePagePath} 
-        >
-          <br /> <br />
-          Single page
-              
-      </Link>
-
+  
+      <CardMain /> 
+    
     </section>
   );
 };

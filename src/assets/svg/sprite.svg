@@ -1,7 +1,5 @@
 <svg width="0" height="0" class="hidden">  
  
- //Registration
-
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" id="camera">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5735 23.8276H16.4267C19.8347 23.8276 21.5387 23.8276 22.7628 23.0246C23.2927 22.6769 23.7477 22.2302 24.1017 21.7099C24.9196 20.5081 24.9196 18.8351 24.9196 15.489C24.9196 12.143 24.9196 10.4699 24.1017 9.26812C23.7477 8.74784 23.2927 8.30113 22.7628 7.95349C21.9762 7.4375 20.9915 7.25306 19.4839 7.18714C18.7645 7.18714 18.145 6.65189 18.0039 5.95924C17.7923 4.92028 16.8632 4.17241 15.784 4.17241H12.2162C11.1371 4.17241 10.2079 4.92028 9.99628 5.95924C9.85518 6.65189 9.23575 7.18714 8.51631 7.18714C7.00869 7.25306 6.02399 7.4375 5.23744 7.95349C4.70753 8.30113 4.25254 8.74784 3.89847 9.26812C3.08057 10.4699 3.08057 12.143 3.08057 15.489C3.08057 18.8351 3.08057 20.5081 3.89847 21.7099C4.25254 22.2302 4.70753 22.6769 5.23744 23.0246C6.46151 23.8276 8.16552 23.8276 11.5735 23.8276ZM14.0001 11.0219C11.4873 11.0219 9.4503 13.0219 9.4503 15.489C9.4503 17.9561 11.4873 19.9561 14.0001 19.9561C16.5129 19.9561 18.5499 17.9561 18.5499 15.489C18.5499 13.0219 16.5129 11.0219 14.0001 11.0219ZM14.0001 12.8088C12.4924 12.8088 11.2702 14.0088 11.2702 15.489C11.2702 16.9693 12.4924 18.1693 14.0001 18.1693C15.5078 18.1693 16.73 16.9693 16.73 15.489C16.73 14.0088 15.5078 12.8088 14.0001 12.8088ZM19.1566 11.9154C19.1566 11.4219 19.564 11.0219 20.0665 11.0219H21.2798C21.7824 11.0219 22.1898 11.4219 22.1898 11.9154C22.1898 12.4088 21.7824 12.8088 21.2798 12.8088H20.0665C19.564 12.8088 19.1566 12.4088 19.1566 11.9154Z"></path>
   </symbol>
@@ -10,9 +8,67 @@
   <path d="M1.16669 8.05L4.83335 12.25L14 1.75" stroke="#2A2A2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 </symbol>
 
- 
- // Footer
- 
+<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 12" id="arrowNext">
+  <path d="M1 1.33337L5 6.00004L1 10.6667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol>
+
+
+// Card 
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="clock">
+    <g clip-path="url(#clip0_163_74)">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.08334C4.73223 2.08334 2.08325 4.73233 2.08325 8.00001C2.08325 11.2677 4.73223 13.9167 7.99992 13.9167C11.2676 13.9167 13.9166 11.2677 13.9166 8.00001C13.9166 4.73233 11.2676 2.08334 7.99992 2.08334ZM0.583252 8.00001C0.583252 3.9039 3.90381 0.583344 7.99992 0.583344C12.096 0.583344 15.4166 3.9039 15.4166 8.00001C15.4166 12.0961 12.096 15.4167 7.99992 15.4167C3.90381 15.4167 0.583252 12.0961 0.583252 8.00001Z" fill="url(#paint0_linear_163_74)"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 4.58334C8.41413 4.58334 8.74992 4.91913 8.74992 5.33334V7.68935L10.1969 9.13635C10.4898 9.42924 10.4898 9.90411 10.1969 10.197C9.90402 10.4899 9.42915 10.4899 9.13626 10.197L7.46959 8.53034C7.32894 8.38969 7.24992 8.19892 7.24992 8.00001V5.33334C7.24992 4.91913 7.5857 4.58334 7.99992 4.58334Z" fill="url(#paint1_linear_163_74)"></path>
+    </g>
+    <defs>
+      <linearGradient id="paint0_linear_163_74" x1="0.583252" y1="8.00001" x2="15.4166" y2="8.00001" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#5AE819"></stop>
+        <stop offset="1" stop-color="#42B60A"></stop>
+      </linearGradient>
+      <linearGradient id="paint1_linear_163_74" x1="0.583252" y1="8.00001" x2="15.4166" y2="8.00001" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#5AE819"></stop>
+        <stop offset="1" stop-color="#42B60A"></stop>
+      </linearGradient>
+      <clipPath id="clip0_163_74">
+        <rect width="16" height="16" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+
+
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="location">
+    <g clip-path="url(#clip0_163_77)">
+      <path d="M14 6.66666C14 11.3333 8 15.3333 8 15.3333C8 15.3333 2 11.3333 2 6.66666C2 5.07536 2.63214 3.54923 3.75736 2.42402C4.88258 1.2988 6.4087 0.666656 8 0.666656C9.5913 0.666656 11.1174 1.2988 12.2426 2.42402C13.3679 3.54923 14 5.07536 14 6.66666Z" stroke="url(#paint0_linear_163_77)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M8 8.66666C9.10457 8.66666 10 7.77123 10 6.66666C10 5.56209 9.10457 4.66666 8 4.66666C6.89543 4.66666 6 5.56209 6 6.66666C6 7.77123 6.89543 8.66666 8 8.66666Z" stroke="url(#paint1_linear_163_77)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+    <defs>
+      <linearGradient id="paint0_linear_163_77" x1="2" y1="7.99999" x2="14" y2="7.99999" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#5AE819"></stop>
+        <stop offset="1" stop-color="#42B60A"></stop>
+      </linearGradient>
+      <linearGradient id="paint1_linear_163_77" x1="2" y1="7.99999" x2="14" y2="7.99999" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#5AE819"></stop>
+        <stop offset="1" stop-color="#42B60A"></stop>
+      </linearGradient>
+      <clipPath id="clip0_163_77">
+        <rect width="16" height="16" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+
+
+
+
+
+
+
+
+
+
+
+
+ // Footer 
  
     
 </svg>
