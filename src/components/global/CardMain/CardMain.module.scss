@@ -6,7 +6,7 @@
 
   &__cardCategory {
     @include flexCol(space-between, center);
-     //margin: 20px 0 14px;
+    margin: 20px 0 14px;
    }
  
    &__viewAll {    

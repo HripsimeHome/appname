@@ -23,12 +23,10 @@
   }
 
   &__profileContainer {
+    @include flexCol(); 
     position: absolute;
     top: 6px;
-    left: 6px;
-   /*  @include flexCol();
-    align-self: flex-start;
-    margin: 6px;*/
+    left: 7px;     
   }
   
   &__profilePhoto {
@@ -40,7 +38,7 @@
 
   &__username {
     @include setFont(12px, 700, $color-white);
-    margin-left: 6px;;
+    margin-left: 7px;
   }
   
 
@@ -51,8 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
-    @include setFont(11px, 500);
-    //@include setFont(12px, 500);
+    @include setFont(12px, 500);   
   }
 
   
@@ -60,11 +57,12 @@
   &__greyPanel {
     background-color: $color-black03;
     border-radius: 6px;
-    padding: 5px;
+    padding: 6px 8px;
   }
 
   &__greyLine {
-    border: 1px solid #F3F3F3
+    border: 1px solid #F3F3F3;
+    margin: 12px 0;
   }
   
    

@@ -62,7 +62,7 @@ const Card = () => {
      <div className={styles.card__header}>
 
      <div className={styles.card__profileContainer}>
-      <div>
+      
       <ImageWebp
         src={meetupImage}
         srcSet={meetupWebpImage}
@@ -71,7 +71,7 @@ const Card = () => {
        // className={styles.categoriesMain__profilePhoto}
        className={styles.card__profilePhoto}
       />
-      </div>
+     
       <div className={styles.card__username}>Имя</div>
      </div>
 

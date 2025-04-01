@@ -1,9 +1,12 @@
 import styles from "./SingleMain.module.scss";
+import SearchFilter from "../../layout/SearchFilter/SearchFilter"
+ 
 
 const SingleMain = () => {
   return (    
       <section className={styles.singleMain}>
-       <h1>Single</h1>
+        <SearchFilter />
+         
       </section>   
   );
 };
