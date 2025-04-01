@@ -1,0 +1,37 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.cardMain {
+  margin: 20px 0;
+
+  &__cardCategory {
+    @include flexCol(space-between, center);
+     //margin: 20px 0 14px;
+   }
+ 
+   &__viewAll {    
+     @include setFont(14px, 600, $color-green);
+     display: flex;
+     align-items: end;  
+     gap: 6px; 
+ 
+     &:hover {
+      color: #A5F77E;
+     }
+   }
+ 
+   &__arrowNext {    
+     stroke:  $color-green;
+     width: 16px;
+     height: 16px;   
+ 
+     &:hover {
+       stroke: #A5F77E;
+     }
+   }
+
+   &__cardContainer {
+    display: flex;   
+    gap: 10px; 
+   }
+}

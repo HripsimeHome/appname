@@ -77,6 +77,10 @@ a {
   @include setFont(28px, 600);   
 }
 
+.titleh3 {
+  @include setFont(20px, 600);   
+}
+
 .textBlueGreen{
  background: $color-blueGreen;
  -webkit-background-clip: text;
