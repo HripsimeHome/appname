@@ -7,15 +7,33 @@ import {
   singlePagePath
 } from "../../../router/path";
 
+const btnCategories = [
+  "Спорт",
+  "Видеоигры",
+  "Путешествия",  
+] 
 
 const SearchMain = () => {
   return (
     <section className={styles.searchMain}>
-    <SearchFilter />
-      Рекомендации спорт Видеоигры Путешествия
-  
-      <CardMain /> 
-    
+      <SearchFilter />
+      <div className={styles.searchMain__categoryContainer}>
+        <label className={styles.searchMain__gradientPanel}>
+        Рекомендации
+        </label>    
+
+        {btnCategories.map (
+        ( category, index ) => (
+        <button 
+          key={index}
+          className={styles.searchMain__btnCategory}
+        >
+          {category}       
+        </button>
+      ))}
+      </div>
+
+      <CardMain />     
     </section>
   );
 };

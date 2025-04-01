@@ -4,5 +4,36 @@
 .searchMain {     
    background-color: $color-lightGrey;
 
+   &__categoryContainer {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+   }
+
+   
+   &__gradientPanel {
+      display: flex;
+      gap: 10px;
+      @include setFont(14px, 700, $color-white);
+     // background: $color-blueGreen;
+      background: linear-gradient(90deg, #009DDF 0%, #01D44A 50%, #9DCF00 100%);
+      border-radius: 8px;
+      padding: 12px 18px;
+ 
+
+   }
+
+   &__btnCategory {
+      @include setFont(14px, 600);  
+      background-color: $color-white;
+      border-radius: 8px;      
+      padding: 12px;
+
+      &:hover {
+         background-color: #E7E7E7;
+         cursor: pointer;         
+      }
+   }
+
    
 }
