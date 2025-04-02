@@ -52,6 +52,14 @@
     @include setFont(12px, 500);   
   }
 
+  &__infoContaineSmall {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    @include setFont(10px, 500, $color-black08);   
+  }
+
+
   
 
   &__greyPanel {
@@ -64,12 +72,38 @@
     border: 1px solid #F3F3F3;
     margin: 12px 0;
   }
+
+  &__iconPosition {
+    @include flexCol();
+    gap: 4px;
+  }
+
+.icon {
+  background-size: contain;  
+  background-position: center;
+  background-repeat: no-repeat;
+}
   
+  &__clockIcon {
+    @extend .icon;
+    width: 15px;
+    height: 15px;
+    background-image: url("../../../assets/images/icons/clock.svg");    
+  }
+
+  &__locationIcon {
+    @extend .icon;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../../assets/images/icons/location.svg");     
+  }
+  
+ 
    
 }
 
 
-
+//$color-black08
 
 /*
 VIdeogame 

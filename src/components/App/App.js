@@ -15,13 +15,12 @@ function App() {
     <>
       <div className="container wrapper">
         <AppRouter />
-      {/*}  <div className="linePosition"> 
+      {/* <div className="linePosition"> 
           <span className="line"></span>
-        </div>   */}    
-      </div>
-    
-      <Footer />      
+        </div>  */}    
+      </div> 
 
+      <Footer />     
     </>
   );
 }

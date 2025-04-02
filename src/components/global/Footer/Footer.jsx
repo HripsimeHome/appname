@@ -47,8 +47,6 @@ const Footer = () => {
             >
           </NavLink> 
 
-
-
           <NavLink 
             to={notificationPagePath}         
             className={({ isActive }) =>
@@ -62,10 +60,7 @@ const Footer = () => {
             </span>
           </NavLink> 
 
-
-
         </div>
-
        
         <div className={styles.footer__linePosition}> 
           <span className={styles.footer__line}></span>

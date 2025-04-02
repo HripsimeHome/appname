@@ -47,8 +47,7 @@ import {
 } from "../../../assets/images"
 
 import {
-  clockIcon, 
-  locationIcon
+ 
 } from "../../../assets/svg";
 
 const Card = () => {
@@ -56,24 +55,21 @@ const Card = () => {
     <>  
      <div className={styles.card}>
       
+      <div className={styles.card__header}>
 
-
-
-     <div className={styles.card__header}>
-
-     <div className={styles.card__profileContainer}>
+        <div className={styles.card__profileContainer}>
       
-      <ImageWebp
-        src={meetupImage}
-        srcSet={meetupWebpImage}
-        //alt={alt}
-       // key={index}
-       // className={styles.categoriesMain__profilePhoto}
-       className={styles.card__profilePhoto}
-      />
+          <ImageWebp
+            src={meetupImage}
+            srcSet={meetupWebpImage}
+            //alt={alt}
+          // key={index}
+          // className={styles.categoriesMain__profilePhoto}
+          className={styles.card__profilePhoto}
+          />
      
-      <div className={styles.card__username}>Имя</div>
-     </div>
+        <div className={styles.card__username}>Имя</div>
+      </div>
 
       <ImageWebp
         src={videogameImage}
@@ -82,12 +78,7 @@ const Card = () => {
        // key={index}
        // className={styles.categoriesMain__categoryImg}
       />
-
      </div>
-
-
-
-
 
 
 
@@ -99,27 +90,33 @@ const Card = () => {
 
 
       <div className={styles.card__infoContainerBig}>
-      <div className={styles.card__greyPanel}>
-        <span>
-        
-          21.02.25,</span>
-        <span>12:30</span>
-      </div>
+        <div className={styles.card__greyPanel}>
 
-      <span className={styles.card__greyPanel}>
-       <strong>Видеоигры</strong>
-      </span>
-      <span className={styles.card__greyPanel}>
+          <div className={styles.card__iconPosition}>        
+            <label className={styles.card__clockIcon}></label>
+            <span>21.02.25,</span>
+            <span>12:30</span>
+          </div>
+        </div>
+
+
+        <span className={styles.card__greyPanel}>
+          <strong>Видеоигры</strong>
+        </span>
+
+        <div className={styles.card__greyPanel}>      
+          <div className={styles.card__iconPosition}>        
+            <label className={styles.card__locationIcon}></label>
+            <span>Санкт-Питербург</span>          
+          </div>        
+        </div>
+
       
-        Санкт-Питербург
-      </span>
-</div>
+      </div>  
 
-
-
-     
 
       <hr className={styles.card__greyLine} />
+      <div className={styles.card__infoContainerBig}>
 
       <span className={styles.card__greyPanel}>
       18+
@@ -136,14 +133,12 @@ const Card = () => {
       <span className={styles.card__greyPanel}>
       С животными
       </span>
+      </div>
 
 
 
      </div>
 
-
-
-   
      </>      
   );
 };
