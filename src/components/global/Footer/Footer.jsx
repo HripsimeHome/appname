@@ -12,35 +12,61 @@ const Footer = () => {
     <footer className={styles.footer}>         
       <div className={`${styles.footer__container} container`}>
 
-        <NavLink className={styles.footer__menu}> 
-          <Link 
-            to={homePagePath}
-            className={styles.footer__homeIcon}>
-          </Link>   
+        <div className={styles.footer__menu}>      
+          <NavLink 
+            to={homePagePath}         
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.footer__homeIcon} ${styles.footer__homeIcon_active}`
+                : styles.footer__homeIcon
+            }        
+            >
+          </NavLink>  
 
-          <Link 
-            className={styles.footer__mapIcon}>
-          </Link> 
+          <NavLink 
+            to={homePagePath}         
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.footer__mapIcon} ${styles.footer__mapIcon_active}`
+                : styles.footer__mapIcon
+            }        
+            >
+          </NavLink> 
 
           <Link 
             className={styles.footer__switcher}>
           </Link> 
 
-          <Link 
-           to={registrationPagePath}
-            className={styles.footer__avatarIcon}>
-          </Link>   
+          <NavLink 
+            to={registrationPagePath}         
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.footer__avatarIcon} ${styles.footer__avatarIcon_active}`
+                : styles.footer__avatarIcon
+            }        
+            >
+          </NavLink> 
 
-          <Link
-            to={notificationPagePath}
-            className={styles.footer__notificationIcon}>
-          </Link>  
 
-        </NavLink>
+
+          <NavLink 
+            to={notificationPagePath}         
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.footer__notificationIcon} ${styles.footer__notificationIcon_active}`
+                : styles.footer__notificationIcon
+            }        
+            >
+            <span className={styles.footer__notificationCounter}>
+            5
+            </span>
+          </NavLink> 
+
+
+
+        </div>
 
        
-
-
         <div className={styles.footer__linePosition}> 
           <span className={styles.footer__line}></span>
         </div>
