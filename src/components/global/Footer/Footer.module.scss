@@ -14,26 +14,132 @@
   &__menu {
     @include flexCol(space-around, center);
   // background: green;
-   height: 50px;    
-   
-   svg {
-    @include svg(24px)
-   }
+   height: 50px;   
+  }  
+
+  .menuIcon {  
+    width: 24px;  
+    height: 24px;  
+    background-size: contain;  
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &:hover {      
+      background-size: contain;  
+      background-position: center center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }     
   }
 
+  &__homeIcon {
+    @extend .menuIcon;  
+    background-image: url("../../../assets/images/icons/home.svg");
+  
+    &:hover {
+      background-image: url("../../../assets/images/icons/homeGradient.svg");    
+    }
+  }
+
+  &__mapIcon {
+    @extend .menuIcon;   
+    background: url("../../../assets/images/icons/map.svg");    
+
+  &:hover {
+    background: url("../../../assets/images/icons/mapGradient.svg");        
+  }
+}
+
+  &__avatarIcon {
+    @extend .menuIcon;
+    background: url("../../../assets/images/icons/avatar.svg");
+
+    &:hover {
+      background: url("../../../assets/images/icons/avatarGradient.svg");    
+    }
+  }
+
+  &__notificationIcon {
+    @extend .menuIcon;
+    background: url("../../../assets/images/icons/notification.svg");
+
+    &:hover {
+      background: url("../../../assets/images/icons/notificationGradient.svg");    
+    }
+  }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  &__notificationCounter {
+    @include setFont(12px, 900); 
+    background: linear-gradient(90deg, #A4F77E 0%, #A4F77D 50%, #A5F77E 100%);
+  }
+
+
+
+
+
+
+
+  
   &__switcher {
     width: 40px;      
     height: 40px;
+    @include flexCol();
     background: $color-blueGreen;
     border-radius: 50%;
-    &:after {
-      color: red;
-      width: 18px;
-      height: 18px;
-      border: 1px solid $color-white;
+    &::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      left: 1px;       
+      top: 3px;  
+      border-radius: 50%;     
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-
+    &::after {
+      content: "";
+      width: 10px; 
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff;  
+      position: absolute;
+      left: 3px;         
+      top: 5px; 
+    }
   }
 
 
