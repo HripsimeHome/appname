@@ -35,8 +35,12 @@ a {
 
 #root {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+ // display: flex;
+ // flex-direction: column;
+}
+
+.wrapper { 
+  padding-bottom: 80px;
 }
 
 .container {
@@ -159,5 +163,21 @@ a {
   background: linear-gradient(90deg, #6DFF60 0%, #AFE356 100%);
 }
 
- 
+.linePosition {
+  position: fixed;
+  bottom: 8px;
+  left: 50%;  
+  transform: translateX(-50%);  
+  z-index: 10;
+  @include flexCol();
+ }  
 
+ .line {
+   
+ 
+   width: 133px;
+   height: 5px;
+   display: block;
+   background-color: $color-black;
+   border-radius: 95px;
+ }

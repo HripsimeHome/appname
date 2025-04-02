@@ -3,157 +3,126 @@
 
 .footer {
   position: fixed;
-  bottom: 8px;
+  bottom: 13px;
+  bottom: 0;
   width: 100%;
   background-color: $color-white;
+  padding-top: 10px;
+  padding-bottom: 8px;
 
   &__container {
     width: 100%;      
   }
 
   &__menu {
-    @include flexCol(space-around, center);
-  // background: green;
-   height: 50px;   
+   @include flexCol(space-around, center);  
+   height: 40px;   
+   margin-bottom: 14px;
   }  
 
-  .menuIcon {  
+ .menuIcon {  
     width: 24px;  
     height: 24px;  
     background-size: contain;  
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    &:hover {      
-      background-size: contain;  
-      background-position: center center;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }     
-  }
-
-  &__homeIcon {
-    @extend .menuIcon;  
-    background-image: url("../../../assets/images/icons/home.svg");
+    background-position: center;
+    background-repeat: no-repeat;  
   
     &:hover {
-      background-image: url("../../../assets/images/icons/homeGradient.svg");    
+      cursor: pointer;
+      background-size: contain;  
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
+  
+  &__homeIcon {
+    @extend .menuIcon; 
+    background-image: url("../../../assets/images/icons/home.svg");    
+  
+    &:hover,
+    &_active {
+      background-image: url("../../../assets/images/icons/homeGradient.svg");       
+    }    
+  }    
 
-  &__mapIcon {
-    @extend .menuIcon;   
+  &__homeIcon { 
+    @extend .menuIcon; 
+    background-image: url("../../../assets/images/icons/home.svg");    
+  
+    &:hover,
+    &_active {
+      background-image: url("../../../assets/images/icons/homeGradient.svg");  
+    }    
+  }  
+
+  &__mapIcon {   
+    @extend .menuIcon;
     background: url("../../../assets/images/icons/map.svg");    
 
-  &:hover {
-    background: url("../../../assets/images/icons/mapGradient.svg");        
+    &:hover,
+    &_active {
+      background: url("../../../assets/images/icons/mapGradient.svg");  
+    } 
   }
-}
 
-  &__avatarIcon {
+  &__avatarIcon { 
     @extend .menuIcon;
     background: url("../../../assets/images/icons/avatar.svg");
 
-    &:hover {
-      background: url("../../../assets/images/icons/avatarGradient.svg");    
-    }
+    &:hover,
+    &_active {
+      background: url("../../../assets/images/icons/avatarGradient.svg");  
+    } 
   }
 
-  &__notificationIcon {
+  &__notificationIcon {   
     @extend .menuIcon;
     background: url("../../../assets/images/icons/notification.svg");
 
-    &:hover {
-      background: url("../../../assets/images/icons/notificationGradient.svg");    
-    }
+    &:hover,
+    &_active {
+      background: url("../../../assets/images/icons/notificationGradient.svg");   
+    } 
   }
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  &__notificationCounter {
-    @include setFont(12px, 900); 
-    background: linear-gradient(90deg, #A4F77E 0%, #A4F77D 50%, #A5F77E 100%);
-  }
-
-
-
-
-
-
-
-  
   &__switcher {
     width: 40px;      
     height: 40px;
     @include flexCol();
-    background: $color-blueGreen;
-    border-radius: 50%;
+    background: linear-gradient(90deg, #6DFF60 0%, #56A4E3 100%);     border-radius: 50%;  
+   
     &::before {
-      content: "";
-      width: 14px;
-      height: 14px;
-      position: absolute;
-      left: 1px;       
-      top: 3px;  
-      border-radius: 50%;     
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &::after {
-      content: "";
-      width: 10px; 
-      height: 10px;
+      content: "+";        
+      @include flexCol();           
+      width: 18px;  
+      height: 18px;
+      @include setFont(14px, 700, $color-white); 
       border-radius: 50%;
-      background-color: #fff;  
-      position: absolute;
-      left: 3px;         
-      top: 5px; 
-    }
+      border: 2px solid $color-white;       
   }
+}
 
-
-
+  &__notificationCounter {
+    @include flexCol();
+    width: 16px;
+    height: 16px;
+    @include setFont(12px, 900); 
+    background: linear-gradient(90deg, #A4F77E 0%, #A4F77D 50%, #A5F77E 100%);
+    border-radius: 100px;
+    margin-top: -2px; 
+    margin-left: 10px;      
+  }
 
   &__linePosition {
-   @include flexCol();
-  }  
- 
-  &__line {
-    width: 133px;
-    height: 5px;
-    display: block;
-    background-color: $color-black;
-    border-radius: 95px;
-  }
+    @include flexCol();
+   }  
+  
+   &__line {
+     width: 133px;
+     height: 5px;
+     display: block;
+     background-color: $color-black;
+     border-radius: 95px;
+   }
+
 }
