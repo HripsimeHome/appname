@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
 import styles from "./Card.module.scss"
+
 import { categoriesImages } from "../../../constants/categoriesImages";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
  
@@ -80,84 +84,91 @@ const cardData = [
     forKids: "Для детей",
     petFriendly: "С животными",
      // className: "",
-  },
-  
+  },  
 ];
 
 
 const Card = () => {
   return (   
     <>
-    {cardData.map(
-      ({ category, profilePhoto, username, image, webpImage, title, date, time, location, age, genderSpecific, forKids, petFriendly }, index) => (
-      <Link to={singlePagePath} key={index}>
-        <div className={styles.card}>      
-          <div className={styles.card__header}>
-            <div className={styles.card__profileContainer}>      
-              <img
-                src={profilePhoto}
-                alt="Profile photo"            
-                className={styles.card__profilePhoto}
-              />     
-            <div className={styles.card__username}>{username}</div>
-          </div>
+      <Swiper 
+        slidesPerView={1.5} 
+        spaceBetween={10} 
+       // slidesOffsetBefore={7}
+       // slidesOffsetAfter={7}
+       > 
+      
+        {cardData.map(({ category, profilePhoto, username, image, webpImage, title, date, time, location, age, genderSpecific, forKids, petFriendly }, index) => (
+        <SwiperSlide key={index}> 
+          <Link to={singlePagePath}>
+            <div className={styles.card}>      
+              <div className={styles.card__header}>
+                <div className={styles.card__profileContainer}>      
+                  <img
+                    src={profilePhoto}
+                    alt="Profile photo"            
+                    className={styles.card__profilePhoto}
+                  />     
+                <div className={styles.card__username}>{username}</div>
+                </div>
 
-          <ImageWebp
-             src={image}
-             srcSet={webpImage}
-              //alt={alt}       
-              // className={styles.categoriesMain__categoryImg}
-            />
-          </div>
-
-          <h4 className={styles.card__title}>
-            {title}        
-          </h4>
-
-          <div className={styles.card__infoContainerBig}>
-            <div className={styles.card__greyPanel}>
-              <div className={styles.card__iconPosition}>        
-                <label className={styles.card__clockIcon}></label>                
-                <span>{date},</span>
-                <span>{time}</span>
+                <ImageWebp
+                  src={image}
+                  srcSet={webpImage}
+                  //alt={alt}       
+                  // className={styles.categoriesMain__categoryImg}
+                />
               </div>
-            </div>
 
-            <span className={styles.card__greyPanel}>
-              <strong>{category}</strong>
-            </span>
+              <h4 className={styles.card__title}>
+                {title}        
+              </h4>
 
-            <div className={styles.card__greyPanel}>      
-              <div className={styles.card__iconPosition}>        
-                <label className={styles.card__locationIcon}></label>
-                <span>{location}</span>          
-              </div>        
-            </div>          
-          </div>  
+              <div className={styles.card__infoContainerBig}>
+                <div className={styles.card__greyPanel}>
+                  <div className={styles.card__iconPosition}>        
+                    <label className={styles.card__clockIcon}></label>                
+                    <span>{date},</span>
+                    <span>{time}</span>
+                  </div>
+                </div>
 
-          <hr className={styles.card__greyLine} />
-          <div className={styles.card__infoContaineSmall}>
-            <span className={styles.card__greyPanel}>
-            {age}
-            </span>
+                <span className={styles.card__greyPanel}>
+                  <strong>{category}</strong>
+                </span>
 
-            <span className={styles.card__greyPanel}>
-            {genderSpecific}
-            </span>
+                <div className={styles.card__greyPanel}>      
+                  <div className={styles.card__iconPosition}>        
+                    <label className={styles.card__locationIcon}></label>
+                    <span>{location}</span>          
+                  </div>        
+                </div>          
+              </div>  
 
-            <span className={styles.card__greyPanel}>
-            {forKids}
-            </span>
+              <hr className={styles.card__greyLine} />
+              <div className={styles.card__infoContaineSmall}>
+                <span className={styles.card__greyPanel}>
+                {age}
+                </span>
 
-            <span className={styles.card__greyPanel}>
-            {petFriendly}
-            </span>
-          </div>
+                <span className={styles.card__greyPanel}>
+                {genderSpecific}
+                </span>
 
-        </div>   
-      </Link>
-      )
-    )}
+                <span className={styles.card__greyPanel}>
+                {forKids}
+                </span>
+
+                <span className={styles.card__greyPanel}>
+                {petFriendly}
+                </span>
+              </div>
+
+            </div>   
+          </Link>
+        </SwiperSlide>
+        ))}
+      </Swiper>
     </>    
   );
 };

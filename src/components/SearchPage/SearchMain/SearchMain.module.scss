@@ -2,12 +2,13 @@
 @import "../../../styles/vars";
 
 .searchMain {     
-   background-color: $color-lightGrey;
+   background-color: $color-lightGrey;  
 
    &__categoryContainer {
       display: flex;
       //gap: 10px;
       margin-top: 12px;
+      padding: 0 12px;
    }
    
    &__gradientPanel {
@@ -31,8 +32,17 @@
          cursor: pointer;         
       }
    }
+
+// Swiper
+
+&__btnCategoriesSwiper {
    .swiper-slide {
-      width: 100px !important; /* Adjust this value as needed */
+      width: 180px !important;
+      background-color: lightblue !important;  
    }
+}
+
+
+   
    
 }
