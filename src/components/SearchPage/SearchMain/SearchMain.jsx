@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
 import styles from "./SearchMain.module.scss";
 import SearchFilter from "../../layout/SearchFilter/SearchFilter"
 import CardMain from "../../global/CardMain/CardMain"
@@ -21,16 +24,24 @@ const SearchMain = () => {
         <label className={styles.searchMain__gradientPanel}>
         Рекомендации
         </label>    
+        <Swiper          
+          slidesPerView={2.5}
+          spaceBetween={1}          
+        > 
 
         {btnCategories.map (
         ( category, index ) => (
+           <SwiperSlide key={index}>
         <button 
           key={index}
           className={styles.searchMain__btnCategory}
         >
           {category}       
         </button>
+        </SwiperSlide>
       ))}
+
+    </Swiper>
       </div>
 
       <CardMain />     
