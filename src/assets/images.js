@@ -1,6 +1,6 @@
 // Registration
 
-import profileImage from "./images/registration/profile.jpg";
+import profileImage from "./images/registration/profilePhoto.jpg";
 
 // Categories
 
@@ -81,6 +81,4 @@ export {
 
   booksImage,
   booksWebpImage,
-
-
 };
