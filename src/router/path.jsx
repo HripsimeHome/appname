@@ -19,7 +19,6 @@ export const audiencePagePath = "/audience";
 export const registrationPagePath = "/registration";
 export const categoriesPagePath = "/categories";
 export const searchPagePath = "/search";
-export const singlePagePath = "/single";
 export const notificationPagePath = "/notification";
 
 // Routes
@@ -48,16 +47,17 @@ export const routes = [
   {
     path: categoriesPagePath,
     component: <CategoriesPage />,
+    children: [
+      {
+        path: `:id`,
+        component: <SinglePage />,
+      },
+    ],
   },
 
   {
     path: searchPagePath,
     component: <SearchPage />,
-  },
-
-  {
-    path: singlePagePath,
-    component: <SinglePage />,
   },
 
   {

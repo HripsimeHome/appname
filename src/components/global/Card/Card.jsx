@@ -1,175 +1,108 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import styles from "./Card.module.scss"
+import styles from "./Card.module.scss";
 
 import { categoriesImages } from "../../../constants/categoriesImages";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
- 
-import {    
- singlePagePath
-} from "../../../router/path";
 
-import {
-  profileImage, 
+import { categoriesPagePath } from "../../../router/path";
 
-  videogameImage,
-  videogameWebpImage,
+const bgStyles = {
+  videogame: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
 
-  meetupImage,
-  meetupWebpImage,
+  meetup: "linear-gradient(291.38deg, #FFCADA 2.07%, #FF8D9A 97.65%)",
 
-  cultureImage,
-  cultureWebpImage,
+  culture: "linear-gradient(291.38deg, #EBCAFF 2.07%, #EC8DFF 97.65%)",
+  
+  travel: "linear-gradient(291.38deg, #CAD2FF 2.07%, #4CBFC9 97.65%)",
 
-  travelImage,
-  travelWebpImage,
+  walks: "linear-gradient(291.38deg, #E2FFCA 2.07%, #69C249 97.65%)",
 
-  walksImage,
-  walksWebpImage,
+  creation: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
+  
+  hobby: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
+  beauty: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
+  sport: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
+  business: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
+  science: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
+  books: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
+}
 
-  creationImage,
-  creationWebpImage,
-
-  hobbyImage,
-  hobbyWebpImage,
-
-  beautyImage,
-  beautyWebpImage,
-
-  sportImage,
-  sportWebpImage,
-
-  businessImage,
-  businessWebpImage,
-
-  scienceImage,
-  scienceWebpImage,
-
-  booksImage,
-  booksWebpImage
-
-} from "../../../assets/images"
-
-const cardData = [
-  {
-    category: "Видеоигры",
-    profilePhoto: profileImage,
-    username: "User 1",
-    image: videogameImage,
-    webpImage: videogameWebpImage,
-    title: "Lorem ipsum dolor sit amet consectetur adip",
-    date: "21.02.25",
-    time: "12:30",
-    location: "Санкт-Питербург",
-    age: "18+",
-    genderSpecific: "Для девушек",
-    forKids: "Для детей",
-    petFriendly: "С животными",
-   // className: "",
-  },
-  {
-    category: "Встречи",
-    profilePhoto: profileImage,
-    username: "User 2",
-    image: meetupImage,
-    webpImage: meetupWebpImage,
-    title: "Sit amet consectetur adip",
-    date: "05.03.25",
-    time: "10:00",
-    location: "Москва",
-    age: "18+",
-    genderSpecific: "Для всех",
-    forKids: "Для детей",
-    petFriendly: "С животными",
-     // className: "",
-  },  
-];
-
-
-const Card = () => {
-  return (   
+const Card = ({
+  className,
+  category,
+  profilePhoto,
+  username,
+  image,
+  webpImage,
+  title,
+  date,
+  time,
+  location,
+  id,
+  keywords
+}) => {
+  console.log(id,bgStyles[id])
+  return (
     <>
-      <Swiper 
-        slidesPerView={1.5} 
-        spaceBetween={10} 
-       // slidesOffsetBefore={7}
-       // slidesOffsetAfter={7}
-       > 
-      
-        {cardData.map(({ category, profilePhoto, username, image, webpImage, title, date, time, location, age, genderSpecific, forKids, petFriendly }, index) => (
-        <SwiperSlide key={index}> 
-          <Link to={singlePagePath}>
-            <div className={styles.card}>      
-              <div className={styles.card__header}>
-                <div className={styles.card__profileContainer}>      
-                  <img
-                    src={profilePhoto}
-                    alt="Profile photo"            
-                    className={styles.card__profilePhoto}
-                  />     
-                <div className={styles.card__username}>{username}</div>
-                </div>
+      <Link to={`${categoriesPagePath}/${id}`} className={className || ""}>
+        <div className={styles.card}>
+          <div style={{background: bgStyles[id]}} className={styles.card__header}>
+            <div className={styles.card__profileContainer}>
+              <img
+                src={profilePhoto}
+                alt="Profile photo"
+                className={styles.card__profilePhoto}
+              />
+              <div className={styles.card__username}>{username}</div>
+            </div>
 
-                <ImageWebp
-                  src={image}
-                  srcSet={webpImage}
-                  //alt={alt}       
-                  // className={styles.categoriesMain__categoryImg}
-                />
+            <ImageWebp
+              src={image}
+              srcSet={webpImage}
+              //alt={alt}
+              // className={styles.categoriesMain__categoryImg}
+            />
+          </div>
+
+          <h4 className={styles.card__title}>{title}</h4>
+
+          <div className={styles.card__infoContainerBig}>
+            <div className={styles.card__greyPanel}>
+              <div className={styles.card__iconPosition}>
+                <label className={styles.card__clockIcon}></label>
+                <span>{date},</span>
+                <span>{time}</span>
               </div>
+            </div>
 
-              <h4 className={styles.card__title}>
-                {title}        
-              </h4>
+            <span className={styles.card__greyPanel}>
+              <strong>{category}</strong>
+            </span>
 
-              <div className={styles.card__infoContainerBig}>
-                <div className={styles.card__greyPanel}>
-                  <div className={styles.card__iconPosition}>        
-                    <label className={styles.card__clockIcon}></label>                
-                    <span>{date},</span>
-                    <span>{time}</span>
-                  </div>
-                </div>
-
-                <span className={styles.card__greyPanel}>
-                  <strong>{category}</strong>
-                </span>
-
-                <div className={styles.card__greyPanel}>      
-                  <div className={styles.card__iconPosition}>        
-                    <label className={styles.card__locationIcon}></label>
-                    <span>{location}</span>          
-                  </div>        
-                </div>          
-              </div>  
-
-              <hr className={styles.card__greyLine} />
-              <div className={styles.card__infoContaineSmall}>
-                <span className={styles.card__greyPanel}>
-                {age}
-                </span>
-
-                <span className={styles.card__greyPanel}>
-                {genderSpecific}
-                </span>
-
-                <span className={styles.card__greyPanel}>
-                {forKids}
-                </span>
-
-                <span className={styles.card__greyPanel}>
-                {petFriendly}
-                </span>
+            {location && <div className={styles.card__greyPanel}>
+              <div className={styles.card__iconPosition}>
+                <label className={styles.card__locationIcon}></label>
+                <span>{location}</span>
               </div>
+            </div>}
+          </div>
 
-            </div>   
-          </Link>
-        </SwiperSlide>
-        ))}
-      </Swiper>
-    </>    
+          <hr className={styles.card__greyLine} />
+          <div className={styles.card__infoContaineSmall}>
+            {
+              keywords.map((keyword,index) => (
+
+                <span className={styles.card__greyPanel} key={index}>{keyword}</span>
+              ))
+            }
+
+          </div>
+        </div>
+      </Link>
+    </>
   );
 };
 

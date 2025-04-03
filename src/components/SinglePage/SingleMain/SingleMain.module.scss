@@ -1,6 +1,18 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.singleMain {     
+.singleMain {
   background-color: $color-lightGrey;
+  padding-bottom: 16px;
+
+  &__columns {
+    columns: 2;
+    gap: 11px;
+  }
+
+  &__card {
+    padding-bottom: 11px;
+    break-inside: avoid;
+    display: block;
+  }
 }

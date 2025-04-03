@@ -1,48 +1,44 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.searchMain {     
-   background-color: $color-lightGrey;  
+.searchMain {
+  background-color: $color-lightGrey;
+  padding-bottom: 16px;
 
-   &__categoryContainer {
-      display: flex;
-      //gap: 10px;
-      margin-top: 12px;
-      padding: 0 12px;
-   }
-   
-   &__gradientPanel {
-      display: flex;
-      gap: 10px;
-      @include setFont(14px, 700, $color-white);
-     // background: $color-blueGreen;
-      background: linear-gradient(90deg, #009DDF 0%, #01D44A 50%, #9DCF00 100%);
-      border-radius: 8px;
-      padding: 12px 18px;
-   }
+  &__categoryContainer {
+    // display: flex;
+    //gap: 10px;
+    margin-top: 12px;
+    //  padding: 0 12px;
+  }
 
-   &__btnCategory {
-      @include setFont(14px, 600);  
-      background-color: $color-white;
-      border-radius: 8px;      
-      padding: 12px;
+  &__gradientPanel {
+    display: flex;
+    gap: 10px;
+    @include setFont(13px, 700, $color-white);
+    // background: $color-blueGreen;
+    background: linear-gradient(90deg, #009ddf 0%, #01d44a 50%, #9dcf00 100%);
+    border-radius: 8px;
+    padding: 13px 11px;
+  }
 
-      &:hover {
-         background-color: #E7E7E7;
-         cursor: pointer;         
-      }
-   }
+  &__btnCategory {
+    @include setFont(13px, 600);
+    background-color: $color-white;
+    border-radius: 8px;
+    padding: 13px 11px;
 
-// Swiper
+    &:hover {
+      background-color: #e7e7e7;
+      cursor: pointer;
+    }
+  }
 
-&__btnCategoriesSwiper {
-   .swiper-slide {
-      width: 180px !important;
-      background-color: lightblue !important;  
-   }
-}
+  // Swiper
 
-
-   
-   
+//   &__btnCategoriesSwiper {
+//     :global(.swiper-slide) {
+//       background-color: lightblue !important;
+//     }
+//   }
 }
