@@ -34,8 +34,7 @@ const SearchMain = () => {
         {btnCategories.map (
           ( category, index ) => (
           <SwiperSlide key={index}>
-            <button 
-              key={index}
+            <button              
               className={styles.searchMain__btnCategory}
             >
             {category}       
