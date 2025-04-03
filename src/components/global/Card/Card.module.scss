@@ -97,6 +97,13 @@
     height: 16px;
     background-image: url("../../../assets/images/icons/location.svg");     
   }
+
+  &__swiper {
+    .swiper-slide {
+       width: 180px !important;
+       background-color: lightblue !important;  
+    }
+ }
   
  
    
