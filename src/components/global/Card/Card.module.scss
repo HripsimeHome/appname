@@ -40,7 +40,18 @@
     @include setFont(12px, 700, $color-white);
     margin-left: 7px;
   }
+
+  &__categoryImgPosition {    
+    @include flexCol();       
+  }
+
+  &__categoryImg {
+   // max-width: 67%;
+   max-width: 55%;
+    width: 100%;     
+  }
   
+
 
 
 
