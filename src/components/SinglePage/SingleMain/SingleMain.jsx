@@ -24,7 +24,7 @@ const data = [
   },
   {
     profilePhoto: profileImage,
-    username: "User 1",
+    username: "User 2",
     title: "Lorem ipsum dolor sit amet consectetur adip",
     date: "21.02.25",
     time: "12:30",
@@ -38,7 +38,7 @@ const data = [
   },
   {
     profilePhoto: profileImage,
-    username: "User 1",
+    username: "User 3",
     title: "Lorem ipsum dolor sit amet consectetur adip",
     date: "21.02.25",
     time: "12:30",
@@ -53,7 +53,7 @@ const data = [
   },
   {
     profilePhoto: profileImage,
-    username: "User 1",
+    username: "User 4",
     title: "Lorem ipsum dolor sit amet consectetur adip",
     date: "21.02.25",
     time: "12:30",

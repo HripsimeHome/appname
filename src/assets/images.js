@@ -1,5 +1,3 @@
-// Registration
-
 import profileImage from "./images/registration/profilePhoto.jpg";
 
 // Categories

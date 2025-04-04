@@ -3,10 +3,6 @@ import styles from "./CategoriesMain.module.scss";
 import { categoriesImages } from "../../../constants/categoriesImages";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
-import {    
-  searchPagePath
-} from "../../../router/path";
-
 const CategoriesMain = () => {
   return (
     <section className={styles.categoriesMain}>
@@ -25,6 +21,8 @@ const CategoriesMain = () => {
             <h3 className={styles.categoriesMain__categoryTitle}>
             {title}
             </h3>
+
+            <div className={styles.categoriesMain__categoryImgContainer}>
             <ImageWebp
               src={image}
               srcSet={webpImage}
@@ -32,6 +30,7 @@ const CategoriesMain = () => {
               pictureClass={styles.categoriesMain__categoryImgPosition}      
               className={styles.categoriesMain__categoryImg}
             />
+ </div>
         </div>
          )
         )}

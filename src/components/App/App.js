@@ -45,8 +45,8 @@ function App() {
         <AppRouter />
 
         {nextPagePath && (
-          <div className="btnNextContainer">
-            <Link to={nextPagePath} className="btnNext">
+          <div className="btnNextPageContainer container">
+            <Link to={nextPagePath} className="btnNextPage">
               Далее
             </Link>
           </div>

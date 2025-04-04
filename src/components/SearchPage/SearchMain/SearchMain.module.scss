@@ -13,12 +13,12 @@
   &__btnGgradient {   
     @include setFont(13px, 700, $color-white);   
     background: linear-gradient(90deg, #009ddf 0%, #01d44a 50%, #9dcf00 100%);
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 8px;   
     padding: 13px 11px;
 
     &:hover, &:active {     
       background: linear-gradient(90deg, #9dcf00 0%, #01d44a 50%, #009ddf 100%);  
+      cursor: pointer;
     }
   }
 
@@ -27,5 +27,10 @@
     background-color: $color-white;
     border-radius: 8px;
     padding: 13px 11px;
+    
+    &:hover, &:active {     
+      background-color: #E7E7E7;
+      cursor: pointer;
+    }
   }
 }
