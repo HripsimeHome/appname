@@ -40,7 +40,7 @@ a {
 }
 
 .wrapper { 
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 
 .container {
@@ -97,8 +97,19 @@ a {
   -webkit-text-fill-color: transparent;
  }
 
-.btnPrimary {
-  display: block;
+ .btnNextContainer {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 325px;
+  display: flex; 
+  z-index: 1;
+}
+
+.btnNext {   
+  width: 100%;
   height: 52px;
   line-height: 52px;  
   text-align: center;   
@@ -106,14 +117,10 @@ a {
   background: linear-gradient(90deg, #A4F77E 0%, #A4F77D 50%, #A5F77E 100%);
   border-radius: 100px;  
 
-  &:hover {   
+  &:hover,  &:active  {   
     background:   linear-gradient(90deg, #6DFF60 0%, #AFE356 100%);    
     transition: $transition;
     cursor: pointer;
-  }
-  
-  &:active {
-   // transform: translateY(1px);
   }
 }
 

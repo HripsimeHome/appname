@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import styles from "./RegistrationMain.module.scss";
 import Svg from "../../layout/Svg/Svg";
 
@@ -25,13 +24,20 @@ function RegistrationMain() {
           />
 
           <div className={styles.registrationMain__cameraIconBg}>
-            <Svg 
-              id={cameraIcon} 
-              className={styles.registrationMain__cameraIcon}
+            <input
+              type="file"
+              hidden
+              id="profileImageUpload"
+              accept="image/*"
             />
+            <label htmlFor="profileImageUpload">
+              <Svg
+                id={cameraIcon}
+                className={styles.registrationMain__cameraIcon}
+              />
+            </label>
           </div>
         </div>
-
 
         <div className="center">
           <h1 className="titleh1">
@@ -48,35 +54,30 @@ function RegistrationMain() {
 
 
 
-
       <div className={styles.registrationMain__registrationContainer}>
-  <input type="text" placeholder="Имя" />
+      <input type="text" placeholder="Имя" />
 
-  <input type="text" placeholder="Возраст" />
+      <input type="text" placeholder="Возраст" />
 
- <select required>
-    <option value="" hidden>Выберите пол</option>
-    <option value="female">Женский</option>
-    <option value="male">Мужской</option>
-  </select>
+    <select required>
+        <option value="" hidden>Выберите пол</option>
+        <option value="female">Женский</option>
+        <option value="male">Мужской</option>
+      </select>
 
-  <label>
-    <input type="checkbox" required />
-    &nbsp;Я согласен(а) на обработку персональных данных
-  </label>
-</div>
-
-
+      <label>
+        <input type="checkbox" required />
+        &nbsp;Я согласен(а) на обработку персональных данных
+      </label>
+      </div>
 
 
 
 
 
 
-      <Link 
-        to={categoriesPagePath} 
-        className="btnPrimary">Далее
-      </Link>
+
+
     </section>
   )
 }

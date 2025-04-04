@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import styles from "./AudienceMain.module.scss";
 
 import {    
@@ -19,11 +18,6 @@ const AudienceMain = () => {
         <li>Если ты любишь весело проводить время в компании. Тогда тебе точно сюда!          
         </li>
         </ul>
-      <Link 
-        to={registrationPagePath} 
-        className="btnPrimary">
-        Далее
-      </Link>
     </section>
   );
 };
