@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AppRouter from "./../../router/AppRouter";
@@ -9,7 +10,8 @@ import {
   aboutPagePath,
   audiencePagePath,
   registrationPagePath,
-  categoriesPagePath
+  categoriesPagePath,
+  searchPagePath
 } from "../../router/path";
 
 function App() {
@@ -18,6 +20,16 @@ function App() {
   useEffect(() => {
     scrollTop();
   }, [location]);
+
+  const nextStepMap = {
+    [homePagePath]: aboutPagePath,
+    [aboutPagePath]: audiencePagePath,
+    [audiencePagePath]: registrationPagePath,
+    [registrationPagePath]: categoriesPagePath,
+    [categoriesPagePath]: searchPagePath,
+  };
+
+  const nextPagePath = nextStepMap[location.pathname];
 
   const hideFooter = [
     homePagePath,
@@ -31,6 +43,14 @@ function App() {
     <>
       <div className="container wrapper">
         <AppRouter />
+
+        {nextPagePath && (
+          <div className="btnNextContainer">
+            <Link to={nextPagePath} className="btnNext">
+              Далее
+            </Link>
+          </div>
+        )}     
       </div>
 
       {!hideFooter && <Footer />}

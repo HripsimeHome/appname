@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import styles from "./AboutMain.module.scss";
 
 import {    
@@ -22,10 +21,6 @@ const AboutMain = () => {
         <li>Фильтруй события по интересам</li>
         <li>Нажимай «Я пойду» и присоединяйся</li>
         </ul>
-      <Link 
-        to={audiencePagePath} 
-        className="btnPrimary">Далее
-      </Link>
     </section>
   );
 };

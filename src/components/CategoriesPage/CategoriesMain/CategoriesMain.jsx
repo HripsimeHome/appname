@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+
 import styles from "./CategoriesMain.module.scss";
 import { categoriesImages } from "../../../constants/categoriesImages";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
@@ -6,7 +6,6 @@ import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import {    
   searchPagePath
 } from "../../../router/path";
-
 
 const CategoriesMain = () => {
   return (
@@ -36,14 +35,6 @@ const CategoriesMain = () => {
          )
         )}
       </div>
-      <br />
-
-      <Link 
-        to={searchPagePath} 
-        className="btnPrimary">
-        Далее
-      </Link>
-
     </section>
   );
 };
