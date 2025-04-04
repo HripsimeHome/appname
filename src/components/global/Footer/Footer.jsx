@@ -10,8 +10,7 @@ import {
 const Footer = () => {
   return (
     <footer className={styles.footer}>         
-      <div className={`${styles.footer__container} container`}>
-
+      <div className="container">
         <div className={styles.footer__menu}>      
           <NavLink 
             to={homePagePath}         

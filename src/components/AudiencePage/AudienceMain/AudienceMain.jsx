@@ -1,9 +1,5 @@
 import styles from "./AudienceMain.module.scss";
 
-import {    
-  registrationPagePath
-} from "../../../router/path";
-
 const AudienceMain = () => {
   return (
     <section className={styles.audienceMain}>
@@ -17,7 +13,7 @@ const AudienceMain = () => {
         <li>Если тебе интересно живое общение без соцсетей</li>
         <li>Если ты любишь весело проводить время в компании. Тогда тебе точно сюда!          
         </li>
-        </ul>
+      </ul>
     </section>
   );
 };

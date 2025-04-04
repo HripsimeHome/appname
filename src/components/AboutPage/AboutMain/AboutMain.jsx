@@ -1,14 +1,11 @@
 import styles from "./AboutMain.module.scss";
 
-import {    
-  audiencePagePath
-} from "../../../router/path";
-
 const AboutMain = () => {
   return (
     <section className={styles.aboutMain}>
        <div className="center"> 
-        <h1 className="titleh1">Что это за  <br />платформа?</h1>
+          <h1 className="titleh1">Что это за  <br />платформа?
+          </h1>
           <p>
             <span className="textGreenLightGreen">
               <strong>AppName</strong>  
@@ -16,10 +13,10 @@ const AboutMain = () => {
           </p>
         </div> 
         
-      <ul className="list circleBlueGreen">
-        <li>Игры, прогулки, вечеринки, шопинг – выбирай своё!</li>
-        <li>Фильтруй события по интересам</li>
-        <li>Нажимай «Я пойду» и присоединяйся</li>
+        <ul className="list circleBlueGreen">
+          <li>Игры, прогулки, вечеринки, шопинг – выбирай своё!</li>
+          <li>Фильтруй события по интересам</li>
+          <li>Нажимай «Я пойду» и присоединяйся</li>
         </ul>
     </section>
   );

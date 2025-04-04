@@ -12,16 +12,23 @@ import { categoriesPagePath } from "../../../router/path";
 const bgStyles = {
   videogame: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
   meetup: "linear-gradient(291.38deg, #FFCADA 2.07%, #FF8D9A 97.65%)",
-  culture: "linear-gradient(291.38deg, #EBCAFF 2.07%, #EC8DFF 97.65%)",  
+  culture: "linear-gradient(291.38deg, #7CE0F3 2.07%, #C7A8FF 50.06%, #FF7D94 97.65%)",
+
   travel: "linear-gradient(291.38deg, #CAD2FF 2.07%, #4CBFC9 97.65%)",
   walks: "linear-gradient(291.38deg, #E2FFCA 2.07%, #69C249 97.65%)",
-  creation: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",  
-  hobby: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
-  beauty: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
-  sport: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
-  business: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
-  science: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
-  books: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
+  creation: "linear-gradient(291.38deg, #EBCAFF 2.07%, #EC8DFF 97.65%)",   
+  hobby: "linear-gradient(291.38deg, #2C81AA 2.07%, #5A9ACF 50.06%, #8D98FF 97.65%)",
+
+  beauty: "linear-gradient(291.38deg, #DDC9A0 2.07%, #9F8050 97.65%)", 
+
+  sport: "linear-gradient(291.38deg, #ABD780 2.07%, #8DAF59 50.06%, #6F9D40 97.65%)",
+
+ business: "linear-gradient(291.38deg, #C29C79 2.07%, #A77D55 50.06%, #9E6A49 97.65%)",
+
+
+  science: "linear-gradient(291.38deg, #D3E8F5 2.07%, #B3D9F5 50.06%, #A0D0F5 97.65%)",
+
+  books: "linear-gradient(291.38deg, #A8E06A 2.07%, #8DC63F 50.06%, #6F9B3F 97.65%)", 
 }
 
 const Card = ({
@@ -99,7 +106,6 @@ const Card = ({
                 <span className={styles.card__greyPanel} key={index}>{keyword}</span>
               ))
             }
-
           </div>
         </div>
       </Link>

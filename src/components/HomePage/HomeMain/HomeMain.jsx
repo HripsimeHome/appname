@@ -1,9 +1,5 @@
 import styles from "./HomeMain.module.scss";
 
-import {    
-  aboutPagePath
-} from "../../../router/path";
- 
 const HomeMain = () => {
   return (    
     <section className={styles.homeMain}>     
