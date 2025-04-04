@@ -4,6 +4,14 @@ import AppRouter from "./../../router/AppRouter";
 import { scrollTop } from "../../utils/scrollTop";
 import Footer from "../global/Footer/Footer";
 
+import {
+  homePagePath,
+  aboutPagePath,
+  audiencePagePath,
+  registrationPagePath,
+  categoriesPagePath
+} from "../../router/path";
+
 function App() {
   const location = useLocation();
 
@@ -11,16 +19,21 @@ function App() {
     scrollTop();
   }, [location]);
 
+  const hideFooter = [
+    homePagePath,
+    aboutPagePath,
+    audiencePagePath,
+    registrationPagePath,
+    categoriesPagePath
+  ].includes(location.pathname);
+
   return (
     <>
       <div className="container wrapper">
         <AppRouter />
-      {/* <div className="linePosition"> 
-          <span className="line"></span>
-        </div>  */}    
-      </div> 
+      </div>
 
-      <Footer />     
+      {!hideFooter && <Footer />}
     </>
   );
 }

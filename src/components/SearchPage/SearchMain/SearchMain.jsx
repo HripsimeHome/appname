@@ -89,9 +89,9 @@ const SearchMain = () => {
           className={styles.searchMain__btnCategoriesSwiper}
         >
           <SwiperSlide style={{ width: "auto" }}>
-            <label className={styles.searchMain__gradientPanel}>
+            <button className={styles.searchMain__btnGgradient}>
               Рекомендации
-            </label>
+            </button>
           </SwiperSlide>
           {btnCategories.map((category, index) => (
             <SwiperSlide key={index} style={{ width: "auto" }}>

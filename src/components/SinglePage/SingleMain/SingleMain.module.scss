@@ -2,8 +2,8 @@
 @import "../../../styles/vars";
 
 .singleMain {
-  background-color: $color-lightGrey;
-  padding-bottom: 16px;
+  background-color: $color-lightGrey;  
+ // padding: 0 12px 16px 12px;
 
   &__columns {
     columns: 2;

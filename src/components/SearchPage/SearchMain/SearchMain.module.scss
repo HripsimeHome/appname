@@ -5,21 +5,21 @@
   background-color: $color-lightGrey;
   padding-bottom: 16px;
 
-  &__categoryContainer {
-    // display: flex;
-    //gap: 10px;
+  &__categoryContainer {   
     margin-top: 12px;
     //  padding: 0 12px;
   }
 
-  &__gradientPanel {
-    display: flex;
-    gap: 10px;
-    @include setFont(13px, 700, $color-white);
-    // background: $color-blueGreen;
+  &__btnGgradient {   
+    @include setFont(13px, 700, $color-white);   
     background: linear-gradient(90deg, #009ddf 0%, #01d44a 50%, #9dcf00 100%);
     border-radius: 8px;
+    cursor: pointer;
     padding: 13px 11px;
+
+    &:hover, &:active {     
+      background: linear-gradient(90deg, #9dcf00 0%, #01d44a 50%, #009ddf 100%);  
+    }
   }
 
   &__btnCategory {
@@ -27,18 +27,5 @@
     background-color: $color-white;
     border-radius: 8px;
     padding: 13px 11px;
-
-    &:hover {
-      background-color: #e7e7e7;
-      cursor: pointer;
-    }
   }
-
-  // Swiper
-
-//   &__btnCategoriesSwiper {
-//     :global(.swiper-slide) {
-//       background-color: lightblue !important;
-//     }
-//   }
 }
