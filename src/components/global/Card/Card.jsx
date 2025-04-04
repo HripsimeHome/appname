@@ -47,23 +47,30 @@ const Card = ({
   console.log(id,bgStyles[id])
   return (
     <>
-      <Link to={`${categoriesPagePath}/${id}`} className={className || ""}>
+      <Link 
+        to={`${categoriesPagePath}/${id}`} 
+        className={className || ""}>
         <div className={styles.card}>
-          <div style={{background: bgStyles[id]}} className={styles.card__header}>
+          <div 
+          style={{background: bgStyles[id]}} 
+          className={styles.card__header}>
             <div className={styles.card__profileContainer}>
               <img
                 src={profilePhoto}
                 alt="Profile photo"
                 className={styles.card__profilePhoto}
               />
-              <div className={styles.card__username}>{username}</div>
+              <div className={styles.card__username}>
+                {username}
+              </div>
             </div>
 
             <ImageWebp
               src={image}
               srcSet={webpImage}
               //alt={alt}
-              // className={styles.categoriesMain__categoryImg}
+              pictureClass={styles.card__categoryImgPosition}
+              className={styles.card__categoryImg}              
             />
           </div>
 
