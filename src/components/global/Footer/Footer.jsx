@@ -24,7 +24,7 @@ const Footer = () => {
           </NavLink>  
 
           <NavLink 
-            to={homePagePath}         
+           // to={homePagePath}         
             className={({ isActive }) =>
               isActive
                 ? `${styles.footer__mapIcon} ${styles.footer__mapIcon_active}`
@@ -59,12 +59,7 @@ const Footer = () => {
             5
             </span>
           </NavLink> 
-
-        </div>
-       
-        <div className={styles.footer__linePosition}> 
-          <span className={styles.footer__line}></span>
-        </div>
+        </div> 
       </div>
     </footer>
   );

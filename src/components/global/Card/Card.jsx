@@ -11,17 +11,11 @@ import { categoriesPagePath } from "../../../router/path";
 
 const bgStyles = {
   videogame: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
-
   meetup: "linear-gradient(291.38deg, #FFCADA 2.07%, #FF8D9A 97.65%)",
-
-  culture: "linear-gradient(291.38deg, #EBCAFF 2.07%, #EC8DFF 97.65%)",
-  
+  culture: "linear-gradient(291.38deg, #EBCAFF 2.07%, #EC8DFF 97.65%)",  
   travel: "linear-gradient(291.38deg, #CAD2FF 2.07%, #4CBFC9 97.65%)",
-
   walks: "linear-gradient(291.38deg, #E2FFCA 2.07%, #69C249 97.65%)",
-
-  creation: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
-  
+  creation: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",  
   hobby: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
   beauty: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
   sport: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",

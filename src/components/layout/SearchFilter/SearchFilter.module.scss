@@ -11,21 +11,33 @@
   box-shadow: 0px 13px 13px 0px rgba(0, 0, 0, 0.02);
   padding: 12px;
 
+  &__searchPanel {
+    @include flexCol();
+    width: 300px;
+    height: 40px;    
+    background: $color-black04;       
+    border-radius: 10px;     
+    padding: 9px;    
+  }
+
   &__inputSearch {
     width: 300px;
     height: 40px;
     @include setFont(14px, 500, $color-black);
-    background: $color-black04;   
+    background: transparent;   
     border: none;
-    outline: none;
-    border-radius: 10px;
+    outline: none;     
     caret-color: $color-black;
-    padding: 16px;
+    padding-left: 10px;
   
     &::placeholder {
       @include setFont(14px, 500, $color-grey04);
       white-space: normal;
     }
+  }
+    
+  &__searchIcon {
+    @include svg(22px);      
   }
   
   &__btnFilter {
@@ -43,10 +55,8 @@
   }
 
   &__filterIcon {
-   width: 20px;
-   height: 18px;
-  }
-  
+    @include svg(24px);
+  // width: 20px;
+  // height: 18px;
+  }  
 }
-
-
