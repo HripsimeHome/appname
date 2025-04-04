@@ -35,8 +35,13 @@
     @include setFont(13px, 600);
   }
 
+  &__categoryImgPosition {    
+    @include flexCol();       
+  }
+
   &__categoryImg {
     width: 100%;
+    max-width: 50%;
     transition: $transition;
   }
 }

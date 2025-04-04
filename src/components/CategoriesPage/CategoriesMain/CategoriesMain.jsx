@@ -28,7 +28,8 @@ const CategoriesMain = () => {
             <ImageWebp
               src={image}
               srcSet={webpImage}
-              alt={alt}             
+              alt={alt}       
+              pictureClass={styles.categoriesMain__categoryImgPosition}      
               className={styles.categoriesMain__categoryImg}
             />
         </div>
