@@ -25,10 +25,10 @@ function RegistrationMain() {
 
           <div className={styles.registrationMain__cameraIconBg}>
             <input
-              type="file"
-              hidden
+              type="file"              
               id="profileImageUpload"
               accept="image/*"
+              hidden
             />
             <label htmlFor="profileImageUpload">
               <Svg
@@ -52,32 +52,35 @@ function RegistrationMain() {
         </div>        
       </div>
 
-
-
       <div className={styles.registrationMain__registrationContainer}>
-      <input type="text" placeholder="Имя" />
+        <input 
+          type="text"
+          placeholder="Имя" 
+        />
 
-      <input type="text" placeholder="Возраст" />
+        <input 
+          type="text" 
+          placeholder="Возраст" 
+        />   
+       
+        <div  className={styles.registrationMain__selectWrapper}>
+          <select required >
+            <option value="" hidden>Выберите пол</option>
+            <option value="female">Женский</option>
+            <option value="male">Мужской</option>
+          </select>
+        </div>
+   
+        <label className={styles.registrationMain__consentText}>
+          <input
+            type="checkbox"
+            className={styles.registrationMain__consentCheckbox}
+            required       
+          />
+         Я согласен(а) на обработку персональных данных
+       </label>
 
-    <select required>
-        <option value="" hidden>Выберите пол</option>
-        <option value="female">Женский</option>
-        <option value="male">Мужской</option>
-      </select>
-
-      <label>
-        <input type="checkbox" required />
-        &nbsp;Я согласен(а) на обработку персональных данных
-      </label>
       </div>
-
-
-
-
-
-
-
-
     </section>
   )
 }

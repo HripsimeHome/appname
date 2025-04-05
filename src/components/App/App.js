@@ -16,6 +16,7 @@ import {
 
 function App() {
   const location = useLocation();
+  
 
   useEffect(() => {
     scrollTop();
@@ -27,8 +28,8 @@ function App() {
     [audiencePagePath]: registrationPagePath,
     [registrationPagePath]: categoriesPagePath,
     [categoriesPagePath]: searchPagePath,
-  };
-
+  };  
+  
   const nextPagePath = nextStepMap[location.pathname];
 
   const hideFooter = [
@@ -45,8 +46,10 @@ function App() {
         <AppRouter />
 
         {nextPagePath && (
-          <div className="btnNextPageContainer container">
-            <Link to={nextPagePath} className="btnNextPage">
+          <div className="container btnNextPageContainer">
+            <Link 
+              to={nextPagePath} 
+              className="btnNextPage">
               Далее
             </Link>
           </div>

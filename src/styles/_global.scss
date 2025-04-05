@@ -22,21 +22,15 @@ button:active,
 a:focus-visible {
   outline: none;
   border: none;
- // background-color: transparent;
 }
 
 a {
   text-decoration: none;
 }
 
-.pointer {
-  cursor: pointer;
-}
 
 #root {
-  min-height: 100vh;
- // display: flex;
- // flex-direction: column;
+ // min-height: 100vh; 
 }
 
 .wrapper { 
@@ -49,22 +43,13 @@ a {
   width: 100%;   
   margin: 0 auto;
  // box-sizing:content-box;
- // padding-left: 12px;
- // padding-right: 12px;
-
-  //padding-left: 20px;
-  //padding-right: 20px;
-
+  
   @include smScreenMedia {
-    max-width: 576px;
-   // padding-left: 16px;
-   // padding-right: 16px;
+    max-width: 576px;  
   }  
 
   @include mdScreenMedia {
-    max-width:7686px;
-   // padding-left: 16px;
-   // padding-right: 16px;
+    max-width: 768px;    
   }  
 }
 
