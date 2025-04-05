@@ -47,7 +47,12 @@
   &__categoryImg { 
     max-width: 30%;
     width: 100%;     
-    margin-top: 9px;
+    margin-top: 9px;  
+  }
+
+  .categoryHalfImg {    
+    position: absolute;
+    bottom: 0;
   }
   
   &__infoContainerBig {
@@ -99,6 +104,23 @@
     height: 16px;
     background-image: url("../../../assets/images/icons/location.svg");     
   }
+
+  &__dateTime {
+    order: 0;
+  }
+
+  &__location {    
+    order: 1;
+  }
+
+  &__categpryName {
+    font-weight: bold;
+    order: 2;
+  }
+ 
+
+
+
 
   &__swiper {
     .swiper-slide {

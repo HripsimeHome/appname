@@ -85,7 +85,9 @@ const SingleMain = () => {
   return (
     <section className={styles.singleMain}>
       <SearchFilter />
-      <h3>{curCategory.title}</h3>
+      <h3 className={styles.singleMain__title}>
+        {curCategory.title}
+      </h3>
       <div className={styles.singleMain__columns}>
         {data.map((item) => (
           <Card
