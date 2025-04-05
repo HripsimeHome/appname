@@ -1,12 +1,6 @@
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
 import styles from "./Card.module.scss";
-
-import { categoriesImages } from "../../../constants/categoriesImages";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
-
 import { categoriesPagePath } from "../../../router/path";
 
 const bgStyles = {
@@ -23,8 +17,7 @@ const bgStyles = {
 
   sport: "linear-gradient(291.38deg, #ABD780 2.07%, #8DAF59 50.06%, #6F9D40 97.65%)",
 
- business: "linear-gradient(291.38deg, #C29C79 2.07%, #A77D55 50.06%, #9E6A49 97.65%)",
-
+  business: "linear-gradient(291.38deg, #C29C79 2.07%, #A77D55 50.06%, #9E6A49 97.65%)",
 
   science: "linear-gradient(291.38deg, #D3E8F5 2.07%, #B3D9F5 50.06%, #A0D0F5 97.65%)",
 
@@ -45,7 +38,7 @@ const Card = ({
   id,
   keywords
 }) => {
-  console.log(id,bgStyles[id])
+  
   return (
     <>
       <Link 
@@ -53,8 +46,8 @@ const Card = ({
         className={className || ""}>
         <div className={styles.card}>
           <div 
-          style={{background: bgStyles[id]}} 
-          className={styles.card__header}>
+            style={{background: bgStyles[id]}} 
+            className={styles.card__header}>
             <div className={styles.card__profileContainer}>
               <img
                 src={profilePhoto}
@@ -103,7 +96,9 @@ const Card = ({
             {
               keywords.map((keyword,index) => (
 
-                <span className={styles.card__greyPanel} key={index}>{keyword}</span>
+                <span 
+                  className={styles.card__greyPanel} 
+                  key={index}>{keyword}</span>
               ))
             }
           </div>

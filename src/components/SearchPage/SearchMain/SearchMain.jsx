@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import styles from "./SearchMain.module.scss";
 import SearchFilter from "../../layout/SearchFilter/SearchFilter";
 import CardMain from "../../global/CardMain/CardMain";
-
 import { categoriesImages } from "../../../constants/categoriesImages";
 import { profileImage } from "../../../assets/images";
 

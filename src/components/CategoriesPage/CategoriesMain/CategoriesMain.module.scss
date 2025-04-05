@@ -27,8 +27,9 @@
    // padding-top: 9px;
 
     &:hover, &:active {
-      outline: 2px solid $color-green;
+     // outline: 2px solid $color-green;
       cursor: pointer;
+      box-shadow: 0 0 0 2px $color-green;
     }
   }
 
