@@ -4,7 +4,10 @@ import { categoriesImages } from "../../../constants/categoriesImages";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
 const CategoriesMain = () => {
+
+  const isSpecialCategory = (category) => category === "beauty" || category === "creation";
   return (
+    
     <section className={styles.categoriesMain}>
       <h2 className="titleh2">Чем ты&nbsp;
         <span className="textBlueGreen">увлекаешься?       
@@ -29,6 +32,7 @@ const CategoriesMain = () => {
               alt={alt}       
               pictureClass={styles.categoriesMain__categoryImgPosition}      
               className={styles.categoriesMain__categoryImg}
+            //  className={`${styles.categoriesMain__categoryImg} ${isSpecialCategory(category) ? "categoryHalfImg" : ""}`}
             />
  </div>
         </div>

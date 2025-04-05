@@ -39,6 +39,7 @@ const Card = ({
   keywords
 }) => {
   
+  const isSpecialCategory = category === "beauty" || category === "creation";
   return (
     <>
       <Link 
@@ -64,14 +65,16 @@ const Card = ({
               srcSet={webpImage}
               //alt={alt}
               pictureClass={styles.card__categoryImgPosition}
-              className={styles.card__categoryImg}              
+              className={styles.card__categoryImg}   
+            //  className={`${styles.card__categoryImg} ${isSpecialCategory ? styles.card__categoryHalfImg : ""}`}   
+              //className={`${styles.card__categoryImg} ${isSpecialCategory ? styles.card__categoryHalfImg : ""}`}                                    
             />
           </div>
 
           <h4 className={styles.card__title}>{title}</h4>
 
-          <div className={styles.card__infoContainerBig}>
-            <div className={styles.card__greyPanel}>
+          <div className={styles.card__infoContainerBig}>          
+            <div className={`${styles.card__greyPanel} ${styles.card__dateTime}`}>
               <div className={styles.card__iconPosition}>
                 <label className={styles.card__clockIcon}></label>
                 <span>{date},</span>
@@ -79,16 +82,22 @@ const Card = ({
               </div>
             </div>
 
-            <span className={styles.card__greyPanel}>
-              <strong>{category}</strong>
-            </span>
-
-            {location && <div className={styles.card__greyPanel}>
+            
+            {location && 
+            <div className={`${styles.card__greyPanel} ${styles.card__location}`}>
               <div className={styles.card__iconPosition}>
                 <label className={styles.card__locationIcon}></label>
                 <span>{location}</span>
               </div>
             </div>}
+
+            <div className={styles.card__greyPanel}>
+              <span className={styles.card__categpryName}>
+                {category}
+              </span> 
+            </div>
+
+
           </div>
 
           <hr className={styles.card__greyLine} />
