@@ -6,6 +6,7 @@ const AboutMain = () => {
        <div className="center"> 
           <h1 className="titleh1">Что это за  <br />платформа?
           </h1>
+          <br />
           <p>
             <span className="textGreenLightGreen">
               <strong>AppName</strong>  

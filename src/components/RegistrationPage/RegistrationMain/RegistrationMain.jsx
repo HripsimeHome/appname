@@ -1,10 +1,6 @@
 import styles from "./RegistrationMain.module.scss";
 import Svg from "../../layout/Svg/Svg";
 
-import {    
-  categoriesPagePath
-} from "../../../router/path";
-
 import {
   profileImage
 } from "../../../assets/images"
@@ -17,12 +13,11 @@ function RegistrationMain() {
   return (
     <section className={styles.registrationMain}>   
       <div className={styles.registrationMain__header}>
-        <div className={styles.registrationMain__imgContainer}>
+        <div className={styles.registrationMain__profileImgContainer}>
           <img 
             src={profileImage}
-            className={styles.registrationMain__img}
+            className={styles.registrationMain__profileImg}
           />
-
           <div className={styles.registrationMain__cameraIconBg}>
             <input
               type="file"              
@@ -45,6 +40,7 @@ function RegistrationMain() {
             </span>
             немного о себе!     
           </h1>
+          <br />
 
           <p>
             Это поможет находить мероприятия и людей, которые тебе подойдут.
@@ -52,14 +48,14 @@ function RegistrationMain() {
         </div>        
       </div>
 
-      <div className={styles.registrationMain__registrationContainer}>
+      <div className={styles.registrationMain__registrationContainer}>     
         <input 
           type="text"
-          placeholder="Имя *" 
+          placeholder="Имя *"
+          className={styles.registrationMain__inputField}
         />
 
       <div  className={styles.registrationMain__selectWrapper}>
-     {/*} <span className={styles.registrationMain__test}>*</span>*/}
         <select required>
           <option value="" hidden>Выберите пол *</option>
           <option value="female">Женский</option>
