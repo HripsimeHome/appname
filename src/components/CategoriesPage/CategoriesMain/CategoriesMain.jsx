@@ -34,7 +34,7 @@ const CategoriesMain = () => {
               className={styles.categoriesMain__categoryImg}
             //  className={`${styles.categoriesMain__categoryImg} ${isSpecialCategory(category) ? "categoryHalfImg" : ""}`}
             />
- </div>
+          </div>
         </div>
          )
         )}

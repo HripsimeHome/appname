@@ -90,6 +90,7 @@ const SingleMain = () => {
       </h3>
       <div className={styles.singleMain__columns}>
         {data.map((item) => (
+          <div  className={styles.singleMain__singleOrder}>
           <Card
             {...item}
             className={styles.singleMain__card}
@@ -97,7 +98,9 @@ const SingleMain = () => {
             webpImage={curCategory.webpImage}
             category={curCategory.title}
             id={curCategory.id}
+            isSingleOrder={true}
           />
+          </div>
         ))}
       </div>
     </section>
