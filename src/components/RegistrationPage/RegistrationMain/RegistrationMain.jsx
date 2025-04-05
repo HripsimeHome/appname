@@ -55,21 +55,26 @@ function RegistrationMain() {
       <div className={styles.registrationMain__registrationContainer}>
         <input 
           type="text"
-          placeholder="Имя" 
+          placeholder="Имя *" 
         />
+
+<div  className={styles.registrationMain__selectWrapper}>
+          <select required >
+            <option value="" hidden>Выберите пол *</option>
+            <option value="female">Женский</option>
+            <option value="male">Мужской</option>
+          </select>
+        </div>
 
         <input 
           type="text" 
           placeholder="Возраст" 
         />   
+
+
+        
        
-        <div  className={styles.registrationMain__selectWrapper}>
-          <select required >
-            <option value="" hidden>Выберите пол</option>
-            <option value="female">Женский</option>
-            <option value="male">Мужской</option>
-          </select>
-        </div>
+        
    
         <label className={styles.registrationMain__consentText}>
           <input
