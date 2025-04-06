@@ -3,6 +3,17 @@
 
 .categoriesMain {  
   padding: 20px 12px 10px;
+  
+  &__titleGradient {
+    background: linear-gradient(
+    90deg,
+    #009ddf 8.7%,
+    #01d44a 32.82%,
+    #9dcf00 81.94%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
   &__text {
     @include setFont(14px, 500);

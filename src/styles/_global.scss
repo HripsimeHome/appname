@@ -36,17 +36,7 @@ a {
   max-width: 375px;
   width: 100%;
   margin: 0 auto;
- box-sizing:content-box;
-
-  @include smScreenMedia {
-    max-width: 576px;
-    margin: 0 auto;
-  }
-
-  @include mdScreenMedia {
-    max-width: 768px;
-    margin: 0 auto;
-  }
+ // box-sizing: content-box; 
 }
 
 .center {
@@ -116,7 +106,7 @@ a {
   li {
     list-style: none;
     position: relative;
-    @include setFont(15px, 500);
+    @include setFont(15px, 400);
     margin-bottom: 12px;
     padding-left: 25px;
 

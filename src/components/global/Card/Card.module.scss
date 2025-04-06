@@ -74,10 +74,14 @@
       }
 
       .card__categpryName {
-        order: 2;
+        order: 2;        
       }
     }
   }
+
+  &__categpryNameWeight {
+    @include setFont(12px, 600, $color-black, $font-familySecondary);
+   }
 
   &__infoContaineSmall {
     display: flex;

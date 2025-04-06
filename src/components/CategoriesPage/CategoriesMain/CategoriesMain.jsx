@@ -10,7 +10,7 @@ const CategoriesMain = () => {
     
     <section className={styles.categoriesMain}>
       <h2 className="titleh2">Чем ты&nbsp;
-        <span className="textBlueGreen">увлекаешься?       
+      <span className={styles.categoriesMain__titleGradient}>увлекаешься?             
         </span>
       </h2>
       <p className={styles.categoriesMain__text}>

@@ -87,8 +87,11 @@ const Card = ({
               </div>
             </div>
 
-            <span className={`${styles.card__greyPanel} ${styles.card__categpryName}`}>
-            <strong>{category}</strong>           
+            <span className={`
+              ${styles.card__greyPanel}
+              ${styles.card__categpryNameWeight}
+              ${styles.card__categpryName}`}>
+              {category}          
             </span>
             
             {location && 

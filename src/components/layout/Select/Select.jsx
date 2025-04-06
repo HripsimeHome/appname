@@ -1,10 +1,8 @@
 import { useDropdownSelect } from "../../../hooks/useDropdownSelect";
-
-import Svg from "../Svg/Svg";
 import TransitionProvider from "../../../providers/TransitionProvider";
-
-import { arrowSelectIcon } from "../../../assets/svg";
 import styles from "./Select.module.scss";
+import Svg from "../Svg/Svg";
+import { arrowSelectIcon } from "../../../assets/svg";
 
 function Select({
   name,

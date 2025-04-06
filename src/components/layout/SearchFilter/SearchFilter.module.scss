@@ -3,6 +3,7 @@
 
 .searchFilter {
   display: flex;
+  justify-content: space-between;
   gap: 10px;
   height: 64px;
   background-color: $color-white;
@@ -21,7 +22,8 @@
   }
 
   &__inputSearch {
-    width: 300px;
+   // width: 300px;
+    width: 95%;
     height: 40px;
     @include setFont(14px, 500, $color-black);
     background: transparent;   
@@ -55,8 +57,6 @@
   }
 
   &__filterIcon {
-    @include svg(24px);
-  // width: 20px;
-  // height: 18px;
+    @include svg(24px);  
   }  
 }
