@@ -68,12 +68,6 @@ function RegistrationMain() {
           </label>
         </div>
 
-        {/* <div className={styles.registrationMain__selectWrapper}> */}
-        {/* <select required> */}
-        {/* <option value="" hidden>Выберите пол *</option> */}
-        {/* <option value="female">Женский</option> */}
-        {/* <option value="male">Мужской</option> */}
-        {/* </select> */}
         <Select
           valuesArr={[
             { item: "Женский", value: "Женский" },
@@ -85,8 +79,7 @@ function RegistrationMain() {
               Выберите пол <span className="redText">*</span>
             </>
           }
-        />
-        {/* </div> */}
+        />      
 
         <input
           type="text"
