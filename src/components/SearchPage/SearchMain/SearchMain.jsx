@@ -16,12 +16,7 @@ const cardData = categoriesImages.map((category) => ({
       date: "21.02.25",
       time: "12:30",
       location: "Санкт-Питербург",
-        keywords: [
-      "18+",
-      "Для девушек",
-      "Для детей",
-      "С животными",
-    ],
+      keywords: ["18+", "Для девушек", "Для детей", "С животными"],
     },
     {
       profilePhoto: profileImage,
@@ -30,12 +25,7 @@ const cardData = categoriesImages.map((category) => ({
       date: "21.02.25",
       time: "12:30",
       location: "Санкт-Питербург",
-        keywords: [
-      "18+",
-      "Для девушек",
-      "Для детей",
-      "С животными",
-    ],
+      keywords: ["18+", "Для девушек", "Для детей", "С животными"],
     },
     {
       profilePhoto: profileImage,
@@ -44,12 +34,7 @@ const cardData = categoriesImages.map((category) => ({
       date: "21.02.25",
       time: "12:30",
       location: "Санкт-Питербург",
-        keywords: [
-      "18+",
-      "Для девушек",
-      "Для детей",
-      "С животными",
-    ],
+      keywords: ["18+", "Для девушек", "Для детей", "С животными"],
     },
     {
       profilePhoto: profileImage,
@@ -58,12 +43,7 @@ const cardData = categoriesImages.map((category) => ({
       date: "21.02.25",
       time: "12:30",
       location: "Санкт-Питербург",
-        keywords: [
-      "18+",
-      "Для девушек",
-      "Для детей",
-      "С животными",
-    ],
+      keywords: ["18+", "Для девушек", "Для детей", "С животными"],
     },
   ],
 }));
@@ -86,15 +66,13 @@ const SearchMain = () => {
           className={styles.searchMain__btnCategoriesSwiper}
         >
           <SwiperSlide style={{ width: "auto" }}>
-            <button className={styles.searchMain__btnGgradient}>
-              Рекомендации
-            </button>
+            <div className={styles.searchMain__btnGgradient}>Рекомендации</div>
           </SwiperSlide>
           {btnCategories.map((category, index) => (
             <SwiperSlide key={index} style={{ width: "auto" }}>
-              <button className={styles.searchMain__btnCategory}>
+              <div className={styles.searchMain__btnCategory}>
                 {category}
-              </button>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

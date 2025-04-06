@@ -2,10 +2,10 @@
 import styles from "./CategoriesMain.module.scss";
 import { categoriesImages } from "../../../constants/categoriesImages";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
+import { checkSpecialCategory } from "../../../utils/checkSpecialCategory";
 
 const CategoriesMain = () => {
 
-  const isSpecialCategory = (category) => category === "beauty" || category === "creation";
   return (
     
     <section className={styles.categoriesMain}>
@@ -19,7 +19,7 @@ const CategoriesMain = () => {
       </p>
       <div className={styles.categoriesMain__cardContainer}> 
         {categoriesImages.map(
-        ({ title, alt, image, webpImage }, index) => (
+        ({ title, alt, image, webpImage,id }, index) => (
           <div className={styles.categoriesMain__category} key={index}>
             <h3 className={styles.categoriesMain__categoryTitle}>
             {title}
@@ -31,8 +31,8 @@ const CategoriesMain = () => {
               srcSet={webpImage}
               alt={alt}       
               pictureClass={styles.categoriesMain__categoryImgPosition}      
-              className={styles.categoriesMain__categoryImg}
-            //  className={`${styles.categoriesMain__categoryImg} ${isSpecialCategory(category) ? "categoryHalfImg" : ""}`}
+              // className={styles.categoriesMain__categoryImg}
+             className={`${styles.categoriesMain__categoryImg} ${checkSpecialCategory(id) ? styles.categoriesMain__categoryImg_half : ""}`}
             />
           </div>
         </div>

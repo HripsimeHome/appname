@@ -15,12 +15,7 @@ const data = [
     date: "21.02.25",
     time: "12:30",
     location: "Санкт-Питербург",
-      keywords: [
-      "18+",
-      "Для девушек",
-      "Для детей",
-      "С животными",
-    ]
+    keywords: ["18+", "Для девушек", "Для детей", "С животными"],
   },
   {
     profilePhoto: profileImage,
@@ -29,12 +24,7 @@ const data = [
     date: "21.02.25",
     time: "12:30",
     location: "Санкт-Питербург",
-      keywords: [
-      "18+",
-      "Для девушек",
-      "Для детей",
-      "С животными",
-    ]
+    keywords: ["18+", "Для девушек", "Для детей", "С животными"],
   },
   {
     profilePhoto: profileImage,
@@ -43,13 +33,13 @@ const data = [
     date: "21.02.25",
     time: "12:30",
     location: "Санкт-Питербург",
- 
+
     keywords: [
       "18+",
       // "Для девушек",
       // "Для детей",
       // "С животными",
-    ]
+    ],
   },
   {
     profilePhoto: profileImage,
@@ -58,12 +48,7 @@ const data = [
     date: "21.02.25",
     time: "12:30",
     location: "Санкт-Питербург",
-      keywords: [
-      "18+",
-      "Для девушек",
-      "Для детей",
-      "С животными",
-    ]
+    keywords: ["18+", "Для девушек", "Для детей", "С животными"],
   },
 ];
 
@@ -85,22 +70,18 @@ const SingleMain = () => {
   return (
     <section className={styles.singleMain}>
       <SearchFilter />
-      <h3 className={styles.singleMain__title}>
-        {curCategory.title}
-      </h3>
+      <h3 className={styles.singleMain__title}>{curCategory.title}</h3>
       <div className={styles.singleMain__columns}>
         {data.map((item) => (
-          <div  className={styles.singleMain__singleOrder}>
-          <Card
-            {...item}
-            className={styles.singleMain__card}
-            image={curCategory.image}
-            webpImage={curCategory.webpImage}
-            category={curCategory.title}
-            id={curCategory.id}
-            isSingleOrder={true}
-          />
-          </div>
+            <Card
+              {...item}
+              className={styles.singleMain__card}
+              image={curCategory.image}
+              webpImage={curCategory.webpImage}
+              category={curCategory.title}
+              id={curCategory.id}
+              isSingleOrder={true}
+            />
         ))}
       </div>
     </section>

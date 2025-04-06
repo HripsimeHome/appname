@@ -25,9 +25,10 @@ const CardMain = ({ title, items, image, webpImage,id }) => {
         {/* <Card /> */}
         <Swiper
           slidesPerView={1.5}
-          spaceBetween={0}
-          // slidesOffsetBefore={0}
-          slidesOffsetAfter={0}
+          spaceBetween={10}
+          slidesOffsetBefore={12}
+          slidesOffsetAfter={12}
+          // slidesOffsetAfter={0}
         >
           {items.map((card, index) => (
             <SwiperSlide key={index}>
