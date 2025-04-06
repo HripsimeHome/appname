@@ -1,11 +1,9 @@
 import { useState } from "react";
+import Select from "../../layout/Select/Select";
 import styles from "./RegistrationMain.module.scss";
 import Svg from "../../layout/Svg/Svg";
-
 import { profileImage } from "../../../assets/images";
-
 import { cameraIcon } from "../../../assets/svg";
-import Select from "../../layout/Select/Select";
 
 function RegistrationMain() {
   const [selectValue, setSelectValue] = useState("");
@@ -76,7 +74,7 @@ function RegistrationMain() {
           onChange={(value) => setSelectValue(value)}
           name={
             <>
-              Выберите пол <span className="redText">*</span>
+              Выберите пол&nbsp;<span className="redText">*</span>
             </>
           }
         />      
