@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./RegistrationMain.module.scss";
 import Svg from "../../layout/Svg/Svg";
 
@@ -9,10 +9,6 @@ import Select from "../../layout/Select/Select";
 
 function RegistrationMain() {
   const [selectValue, setSelectValue] = useState("");
-  const inputNameRef = useRef();
-  const isFilled = () => inputNameRef.current?.value.trim();
-
-  console.log({ selectValue });
 
   return (
     <section className={styles.registrationMain}>
