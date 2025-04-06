@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import styles from "./RegistrationMain.module.scss";
 import Svg from "../../layout/Svg/Svg";
 
@@ -10,6 +11,11 @@ import {
 } from "../../../assets/svg"
 
 function RegistrationMain() {
+  const inputNameRef = useRef();
+
+  const isFilled = () => inputNameRef.current?.value.trim();
+
+
   return (
     <section className={styles.registrationMain}>   
       <div className={styles.registrationMain__header}>
@@ -48,24 +54,40 @@ function RegistrationMain() {
         </div>        
       </div>
 
-      <div className={styles.registrationMain__registrationContainer}>     
-        <input 
-          type="text"
-          placeholder="Имя *"
-          className={styles.registrationMain__inputField}
-        />
+      <div className={styles.registrationMain__registrationContainer}>    
+        <div className={styles.registrationMain__inputWrapper}>
+          <input
+            type="text"
+            id="name"
+            ref={inputNameRef}
+            className={styles.registrationMain__inputField}
+            onInput={(e) =>
+              e.currentTarget.nextSibling.classList.toggle(
+                styles.hide,
+                isFilled()
+              )
+            }
+            required
+          />
+          <label 
+            htmlFor="name" 
+            className={styles.registrationMain__placeholder}>
+            Имя <span>*</span>
+          </label>
+        </div>    
 
-      <div  className={styles.registrationMain__selectWrapper}>
-        <select required>
-          <option value="" hidden>Выберите пол *</option>
-          <option value="female">Женский</option>
-          <option value="male">Мужской</option>
-        </select>
-      </div>
+        <div className={styles.registrationMain__selectWrapper}>
+          <select required>
+            <option value="" hidden>Выберите пол *</option>
+            <option value="female">Женский</option>
+            <option value="male">Мужской</option>
+          </select>
+        </div>
 
         <input 
           type="text" 
           placeholder="Возраст" 
+          className={styles.registrationMain__inputField}
         />   
 
         <label className={styles.registrationMain__consentText}>
