@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Card.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import { categoriesPagePath } from "../../../router/path";
+import { checkSpecialCategory } from "../../../utils/checkSpecialCategory";
 
 const bgStyles = {
   videogame: "linear-gradient(291.38deg, #CAD2FF 2.07%, #8D98FF 97.65%)",
@@ -37,10 +38,13 @@ const Card = ({
   location,
   id,
   keywords,
-  isSingleOrder = false 
+  isSingleOrder 
 }) => {
   
-  const isSpecialCategory = category === "beauty" || category === "creation";
+  const isSpecialCategory = checkSpecialCategory(id);
+
+  console.log({isSpecialCategory,category});
+  
   return (
     <>
       <Link 
@@ -66,14 +70,14 @@ const Card = ({
               srcSet={webpImage}
               //alt={alt}
               pictureClass={styles.card__categoryImgPosition}
-              className={styles.card__categoryImg}                 
-              //className={`${styles.card__categoryImg} ${isSpecialCategory ? styles.card__categoryHalfImg : ""}`}                                    
+             // className={styles.card__categoryImg}                 
+              className={`${styles.card__categoryImg} ${isSpecialCategory ? styles.card__categoryImg_half : ""}`}                                    
             />
           </div>
 
           <h4 className={styles.card__title}>{title}</h4>
       
-          <div className={`${styles.card__infoContainerBig} ${isSingleOrder ? styles.card__singleOrder : ""}`}>
+          <div className={`${styles.card__infoContainerBig} ${isSingleOrder ? styles.card__infoContainerBig_singleOrder : ""}`}>
        
             <div className={`${styles.card__greyPanel} ${styles.card__dateTime}`}>
               <div className={styles.card__iconPosition}>
