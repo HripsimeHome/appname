@@ -42,11 +42,12 @@ function App() {
 
   return (
     <>
-      <div className="container wrapper">
+      <div className="container">
         <AppRouter />
 
         {nextPagePath && (
-          <div className={`container btnNextPageContainer ${isCategories ? 'btnNextPageFixedContainer' : ''}`}>            
+          <div className={`container btnNextPageContainer ${isCategories ? 'btnNextPageFixedContainer' : ''}`}>
+            
             <Link 
               to={nextPagePath} 
               className="btnNextPage">

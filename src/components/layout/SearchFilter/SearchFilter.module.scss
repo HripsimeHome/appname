@@ -21,8 +21,7 @@
     padding: 9px;    
   }
 
-  &__inputSearch {
-   // width: 300px;
+  &__inputSearch {   
     width: 95%;
     height: 40px;
     @include setFont(14px, 500, $color-black);
