@@ -16,7 +16,7 @@ import {
 
 function App() {
   const location = useLocation();
-  
+  const isCategories = location.pathname === categoriesPagePath;
 
   useEffect(() => {
     scrollTop();
@@ -46,7 +46,7 @@ function App() {
         <AppRouter />
 
         {nextPagePath && (
-          <div className="container btnNextPageContainer">
+          <div className={`container btnNextPageContainer ${isCategories ? 'btnNextPageFixedContainer' : ''}`}>            
             <Link 
               to={nextPagePath} 
               className="btnNextPage">
