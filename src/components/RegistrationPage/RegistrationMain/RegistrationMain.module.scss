@@ -72,7 +72,7 @@
     cursor: pointer;
   }
 
-  &__registrationText {
+  &__registrationText {    
     margin-top: 10px;
   }
 
@@ -110,26 +110,13 @@
         @include setFont(14px, 500, $color-black);
       }
     }
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   top: 50%;
-    //   right: 14px;
-    //   transform: translateY(-50%);
-    //   width: 14px;
-    //   height: 8px;
-    //   background-image: url("../../../assets/images/icons/arrowSelect.svg");
-    //   background-size: contain;
-    //   background-repeat: no-repeat;
-    //   pointer-events: none;
-    // }
   }
 
   &__selectWrapper select:focus + &__inputPlaceholder,
   &__selectWrapper select:not(:placeholder-shown) + &__inputPlaceholder {
     opacity: 0;
   }
+
   &__consentCheckbox {
     appearance: none;
     -webkit-appearance: none;

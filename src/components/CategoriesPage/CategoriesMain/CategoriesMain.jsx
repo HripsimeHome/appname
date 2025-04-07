@@ -6,8 +6,7 @@ import { checkSpecialCategory } from "../../../utils/checkSpecialCategory";
 
 const CategoriesMain = () => {
 
-  return (
-    
+  return (    
     <section className={styles.categoriesMain}>
       <h2 className="titleh2">Чем ты&nbsp;
       <span className={styles.categoriesMain__titleGradient}>увлекаешься?             
