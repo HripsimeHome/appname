@@ -29,9 +29,8 @@ const CategoriesMain = () => {
               src={image}
               srcSet={webpImage}
               alt={alt}       
-              pictureClass={styles.categoriesMain__categoryImgPosition}      
-              // className={styles.categoriesMain__categoryImg}
-             className={`${styles.categoriesMain__categoryImg} ${checkSpecialCategory(id) ? styles.categoriesMain__categoryImg_half : ""}`}
+              pictureClass={styles.categoriesMain__categoryImgPosition}   
+              className={`${styles.categoriesMain__categoryImg} ${checkSpecialCategory(id) ? styles.categoriesMain__categoryImg_half : ""}`}
             />
           </div>
         </div>

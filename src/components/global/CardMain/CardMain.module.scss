@@ -5,8 +5,8 @@
   margin: 20px 0;  
 
   &__cardCategory {
-    @include flexCol(space-between, center);
-    margin: 20px 0 14px;
+    @include flexCol(space-between, center);   
+    margin: -24px 0 14px;
     padding: 0 12px;
    }
  

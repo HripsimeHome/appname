@@ -2,7 +2,6 @@
 @import "../../../styles/vars";
 
 .card {
-//  max-width: 231px;
   width: 100%;
   min-height: 310px;
   background-color: $color-white;
@@ -13,9 +12,9 @@
   0px 30px 18px rgba(0, 0, 0, 0.01),
   0px 53px 21px rgba(0, 0, 0, 0),
   0px 83px 23px rgba(0, 0, 0, 0);
-
   padding-top: 6px;
   padding-bottom: 8px;
+  margin-bottom: 24px;
 
   &__title {
     @include setFont(14px, 600);
@@ -58,6 +57,7 @@
     max-width: 30%;
     width: 100%;
     margin-top: 9px;
+    transition: $transition;
 
     &_half {
       position: absolute;

@@ -12,25 +12,6 @@
   }
 }
 
-@mixin mdScreenMedia {
-  @media (max-width: $md-screen) {
-    @content;
-  }
-}
-
-
-@mixin icon($width, $height: $width) {
-  width: $width;
-  height: $height;
-  object-fit: contain;
-}
-
-@mixin button($bg: transparent, $border: none) {
-  border: $border;
-  background: $bg;
-  cursor: pointer;
-}
-
 @mixin svg($width, $color: transparent, $height: $width, $stroke: none) {
   width: $width;
   height: $height;

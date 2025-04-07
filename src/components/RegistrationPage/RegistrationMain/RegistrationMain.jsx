@@ -62,7 +62,7 @@ function RegistrationMain() {
             htmlFor="name"
             className={styles.registrationMain__inputPlaceholder}
           >
-            Имя <span className="redText">*</span>
+            Имя <span className="textRed">*</span>
           </label>
         </div>
 
@@ -74,7 +74,7 @@ function RegistrationMain() {
           onChange={(value) => setSelectValue(value)}
           name={
             <>
-              Выберите пол&nbsp;<span className="redText">*</span>
+              Выберите пол&nbsp;<span className="textRed">*</span>
             </>
           }
         />      

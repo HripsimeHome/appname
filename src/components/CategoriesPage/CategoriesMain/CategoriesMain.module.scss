@@ -2,7 +2,7 @@
 @import "../../../styles/vars";
 
 .categoriesMain {  
-  padding: 20px 12px 80px;
+  padding: 20px 12px 85px;
   
   &__titleGradient {
     background: linear-gradient(
@@ -20,17 +20,16 @@
     margin: 10px 0 20px;
   }
 
-  &__cardContainer {
-    display: flex;
-    flex-wrap: wrap;
+  &__cardContainer { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
 
   &__category {
     @include flexCol();
-    flex-direction: column;
-    width: 109px;
-    height: 109px;
+    flex-direction: column;  
+    aspect-ratio: 1 / 1;
     position: relative;
     background-color: $color-black04;
     border-radius: 10px;  
