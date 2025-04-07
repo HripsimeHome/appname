@@ -1,4 +1,2 @@
 
-
-
-   export const checkSpecialCategory = (id) =>  id === "beauty" || id === "creation";
+export const checkSpecialCategory = (id) =>  id === "beauty" || id === "creation";

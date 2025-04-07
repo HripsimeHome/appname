@@ -8,11 +8,12 @@
   background-color: $color-white;
   border-radius: 12px;
   box-shadow: 0px 13px 13px 0px #00000005;
-  padding: 6px;
+  padding-top: 6px;
+  padding-bottom: 8px;
 
   &__title {
     @include setFont(14px, 600);
-    margin: 10px 0;
+    margin: 10px;
   }
 
   &__header {
@@ -21,6 +22,7 @@
     @include flexCol();
     flex-direction: column;
     border-radius: 8px;
+    margin: 0 6px;
   }
 
   &__profileContainer {
@@ -63,6 +65,7 @@
     flex-wrap: wrap;
     gap: 9px;
     @include setFont(12px, 500);
+    padding: 0 8px; 
 
     &_singleOrder {
       .card__dateTime {
@@ -88,6 +91,7 @@
     flex-wrap: wrap;
     gap: 6px;
     @include setFont(10px, 500, $color-black08);
+    padding: 0 8px; 
   }
 
   &__greyPanel {
@@ -96,8 +100,10 @@
     padding: 6px 8px;
   }
 
-  &__greyLine {
-    border: 1px solid #f3f3f3;
+  &__greyLine {   
+    outline: 0;
+    border: none;
+    border-top: 1px solid #f3f3f3; 
     margin: 12px 0;
   }
 

@@ -42,7 +42,7 @@
   }
 
   &__categoryTitle {
-    @include setFont(13px, 600);
+    @include setFont(14px, 600, $color-black, $font-familySecondary);
   }
 
   &__categoryImgPosition {    
@@ -51,13 +51,14 @@
 
   &__categoryImg {
     width: 100%;
-    max-width: 56%;
+    max-width: 65%;
     transition: $transition;
+    margin-top: 10px;
 
     &_half {
       position: absolute;
       bottom: 0;
-      max-width: 63%;
+      max-width: 60%;
     }
   }
 
