@@ -3,11 +3,11 @@
 
 .searchMain {
   background-color: $color-lightGrey;
-  padding-bottom: 55px;
+  padding-bottom: 45px;
 
   &__categoryContainer {   
-    margin-top: 12px;
-    //  padding: 0 12px;
+   padding-top: 12px;
+   padding-bottom: 20px;    
   }
 
   &__btnGgradient {   

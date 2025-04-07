@@ -3,7 +3,7 @@
 
 .singleMain {
   background-color: $color-lightGrey;   
-  padding-bottom: 60px;
+  padding-bottom: 45px;
  
   &__title {
     margin: 20px 0 14px 12px;
@@ -19,7 +19,8 @@
   &__card {
     display: block;
     break-inside: avoid;    
-    cursor: default;     
+    cursor: default;      
+    margin-bottom: -24px;
     padding-bottom: 11px;    
   }  
 }

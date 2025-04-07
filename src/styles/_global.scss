@@ -32,8 +32,7 @@ a {
 .container {
   max-width: 375px;
   width: 100%;
-  margin: 0 auto;
- // box-sizing: content-box; 
+  margin: 0 auto; 
 }
 
 .center {
@@ -52,6 +51,10 @@ a {
   @include setFont(20px, 600);
 }
 
+.textRed {
+  color: $color-red;
+}
+
 .textBlueGreen {
   background: $color-blueGreen;
   -webkit-background-clip: text;
@@ -62,39 +65,6 @@ a {
   background: $color-greenLightGreen;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.btnNextPageContainer {
-  width: 100%;
-  @include flexCol(); 
-  padding-bottom: 15px;
-}
-
-.btnNextPageFixedContainer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  background-color: $color-white;
-}
-
-.btnNextPage {
-  width: 100%;
-  max-width: 325px;
-  height: 52px;
-  line-height: 52px;
-  text-align: center;
-  @include setFont(16px, 700);
-  background: linear-gradient(90deg, #a4f77e 0%, #a4f77d 50%, #a5f77e 100%);
-  border-radius: 100px;
-
-  &:hover,
-  &:active {
-    background: linear-gradient(90deg, #6dff60 0%, #afe356 100%);
-    transition: $transition;
-    cursor: pointer;
-  }
 }
 
 // List
@@ -143,11 +113,40 @@ a {
   background: linear-gradient(90deg, #6dff60 0%, #afe356 100%);
 }
 
+.btnNextPageContainer {
+  width: 100%;
+  @include flexCol(); 
+  padding-bottom: 15px;
+}
+
+.btnNextPageFixedContainer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: $color-white;
+}
+
+.btnNextPage {
+  width: 100%;
+  max-width: 325px;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+  @include setFont(16px, 700);
+  background: linear-gradient(90deg, #a4f77e 0%, #a4f77d 50%, #a5f77e 100%);
+  border-radius: 100px;
+
+  &:hover,
+  &:active {
+    background: linear-gradient(90deg, #6dff60 0%, #afe356 100%);
+    transition: $transition;
+    cursor: pointer;
+  }
+}
+
 .categoryHalfImg {
   position: absolute;
   bottom: 0;
-}
-
-.redText {
-  color: $color-red;
 }
