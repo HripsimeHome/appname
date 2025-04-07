@@ -69,8 +69,7 @@ const Card = ({
               src={image}
               srcSet={webpImage}
               //alt={alt}
-              pictureClass={styles.card__categoryImgPosition}
-             // className={styles.card__categoryImg}                 
+              pictureClass={styles.card__categoryImgPosition}                             
               className={`${styles.card__categoryImg} ${isSpecialCategory ? styles.card__categoryImg_half : ""}`}                                    
             />
           </div>
