@@ -3,11 +3,11 @@
 
 .singleMain {
   background-color: $color-lightGrey;   
-  padding-bottom: 11px; 
+  padding-bottom: 60px;
  
- &__title {
-  margin: 20px 0 14px 12px;
-}
+  &__title {
+    margin: 20px 0 14px 12px;
+  }
 
   &__columns {    
     columns: 2;
@@ -19,8 +19,7 @@
   &__card {
     display: block;
     break-inside: avoid;    
-    cursor: default;   
-    box-shadow: 0px 13px 13px 0px #00000005;   
+    cursor: default;     
     padding-bottom: 11px;    
   }  
 }

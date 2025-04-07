@@ -5,9 +5,8 @@ const AboutMain = () => {
     <section className={styles.aboutMain}>
        <div className="center"> 
           <h1 className="titleh1">Что это за  <br />платформа?
-          </h1>
-          <br />
-          <p>
+          </h1>        
+          <p className={styles.aboutMain__aboutMainText}>
             <span className="textGreenLightGreen">
               <strong>AppName</strong>  
             </span> — это место, где каждый может создать или найти локальное мероприятие.          
